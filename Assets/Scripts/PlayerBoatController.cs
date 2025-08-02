@@ -9,10 +9,15 @@ namespace Player
         [Header ("Player Numerical Variables")]
         public float playerMoveSpeed = 5;
         public float playerRotSpeed = 5;
-        public float playerAcceleration = 2.5f;
 
         // references
         public Camera playerCamera;
+        public Rigidbody body;
+
+        private void Update()
+        {
+            
+        }
 
     }
 }
