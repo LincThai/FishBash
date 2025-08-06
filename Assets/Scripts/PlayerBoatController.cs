@@ -16,7 +16,15 @@ namespace Player
 
         private void Update()
         {
-            
+            // forward or backward movement input
+            float verticalInput = Input.GetAxis("Vertical");
+
+            body.AddRelativeForce(Vector3.forward * verticalInput * playerMoveSpeed);
+
+            // Left or Right torque/rotational input
+            float horizontalInput = Input.GetAxis("Horizontal");
+
+            body.AddRelativeTorque(Vector3.up * horizontalInput * playerRotSpeed);
         }
 
     }
