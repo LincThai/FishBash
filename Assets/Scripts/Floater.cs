@@ -27,12 +27,14 @@ public class Floater : MonoBehaviour
             // the object is submerged which affects the strength of the buoyancy force. clamp it between 0 and 1 because once an
             // object is fully submerged the buoyancy force remains the same regardless of the depth of the object. Multiply the whole thing by the displacement amount.
             float displacementMultiplier = Mathf.Clamp01((waveHeight - transform.position.y) / depthBeforeSubmerge) * displacementAmount;
+            
             // then we add an upward force with the y component equal to the force of gravity multiplied by the displacement multiplier.
             // we use the acceleration force mode as the buoyancy force should not be affected by the objects mass.
             // we change add force to add force at position and add the position of the floater to make the ship rotate rather than stay flat
             // but gravity is at the center forcing only one side down.
             rigidBody.AddForceAtPosition(new Vector3(0, Mathf.Abs(Physics.gravity.y) * displacementMultiplier, 0), transform.position, ForceMode.Acceleration);
-
+            
+            // applies drag
             rigidBody.AddForce(displacementMultiplier * -rigidBody.linearVelocity * waterDrag * Time.fixedDeltaTime, ForceMode.VelocityChange);
             rigidBody.AddTorque(displacementMultiplier * -rigidBody.angularVelocity * waterAngularDrag * Time.fixedDeltaTime, ForceMode.VelocityChange);
         }
