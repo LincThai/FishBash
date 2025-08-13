@@ -4,7 +4,9 @@ using UnityEngine;
 public class Fish : ScriptableObject
 {
     // set variables
-    public string name;
+    public string fishName;
+    // sizes up the text space im the inspector
+    [TextArea(1, 10)]
     public string description;
     public Sprite fishSprite;
 }

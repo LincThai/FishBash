@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba813987c424fd43b89d1bb6f7e8926, type: 3}
   m_Name: CarlFish
   m_EditorClassIdentifier: 
-  name: CarlFish
+  fishName: CarlFish
   description: A Fish with a chiselled jawline and a robust physique from extreme
     workouts. They love to work out in groups to show off the muscular well defined
     abs.

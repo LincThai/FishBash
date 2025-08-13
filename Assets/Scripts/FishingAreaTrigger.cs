@@ -14,11 +14,16 @@ public class FishingAreaTrigger : MonoBehaviour
             // check if there are any fish left and for input
             if (numOfFish > 0)
             {
-                // activate fishing mode.
-                Debug.Log("You Are Fishing!!!");
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    // activate fishing mode.
+                    Debug.Log("You Are Fishing!!!");
+                    // maybe call a function to update the number of fish
+                }
             }
             else
             {
+                // possibly call a destroy gameobject function or call it in update
                 Debug.Log("NO FISH AVAILABLE!!!");
             }
         }
