@@ -884,6 +884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FishAreaTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 7609994430885395593, guid: 59a5e545ee1cf854084e7481990233fc, type: 3}
+      propertyPath: FishBashUI
+      value: 
+      objectReference: {fileID: 731770104}
     - target: {fileID: 8108488181824758805, guid: 59a5e545ee1cf854084e7481990233fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -994,17 +998,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 792220108821074301, guid: 9a08054a935a05f4dab3a835e387f885, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2395413978036892781, guid: 9a08054a935a05f4dab3a835e387f885, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3300532317909200623, guid: 9a08054a935a05f4dab3a835e387f885, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8606189293040092591, guid: 9a08054a935a05f4dab3a835e387f885, type: 3}
       propertyPath: m_LocalPosition.x

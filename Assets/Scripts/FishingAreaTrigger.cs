@@ -11,8 +11,8 @@ public class FishingAreaTrigger : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         // check if it is the player and the fish scriptableObject is assigned
-        if (other.tag == "Player" && catchableFish != null)
-        {
+        if (other.CompareTag("Player") && catchableFish != null)
+        {   
             // check if there are any fish left and for input
             if (numOfFish > 0)
             {
