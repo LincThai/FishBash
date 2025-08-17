@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class FishingAreaTrigger : MonoBehaviour
 {
@@ -6,7 +7,16 @@ public class FishingAreaTrigger : MonoBehaviour
     public Fish catchableFish;
     public int numOfFish;
 
+    // Inputs
+    private InputAction interactAction;
+
+    // minigame reference
     public GameObject FishBashUI;
+
+    private void Awake()
+    {
+        interactAction = InputSystem.actions.FindAction("Interact");
+    }
 
     private void OnTriggerStay(Collider other)
     {
@@ -16,7 +26,7 @@ public class FishingAreaTrigger : MonoBehaviour
             // check if there are any fish left and for input
             if (numOfFish > 0)
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (interactAction.WasPressedThisFrame())
                 {
                     // activate fishing mode.
                     Debug.Log("You Are Fishing!!!");
