@@ -28,7 +28,7 @@ public class FishingAreaTrigger : MonoBehaviour
             if (numOfFish > 0)
             {
                 Debug.Log("There is fish here");
-                if (interactAction.WasPressedThisFrame())
+                if (interactAction.IsPressed())
                 {
                     // activate fishing mode.
                     Debug.Log("You Are Fishing!!!");
