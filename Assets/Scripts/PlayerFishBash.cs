@@ -5,6 +5,7 @@ public class PlayerFishBash : MonoBehaviour
 {
     // set variables
     // player variables
+    [Header("Editable Variables")]
     public int playerMaxLives = 3;
     public int playerCurrentLives;
     public int playerDamage = 1;
@@ -12,6 +13,7 @@ public class PlayerFishBash : MonoBehaviour
     public bool isGuarding = false;
 
     // references
+    [Header("References")]
     public GameObject fishBashUi;
     public GameObject playerHealthBar;
     public FishingAreaTrigger fishAreaTrigger;
@@ -47,6 +49,8 @@ public class PlayerFishBash : MonoBehaviour
             // reduce life/health
             playerCurrentLives -= damageTaken;
 
+            // play damage sound and animation
+
             // check if player has less than or 0 lives/health
             if (playerCurrentLives <= 0)
             {
@@ -59,6 +63,8 @@ public class PlayerFishBash : MonoBehaviour
 
     public void PlayerDeath()
     {
+        // play lose sound
+
         // deactivate the ui
         fishBashUi.SetActive(false);
 
