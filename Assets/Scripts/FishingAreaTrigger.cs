@@ -22,11 +22,13 @@ public class FishingAreaTrigger : MonoBehaviour
     {
         // check if it is the player and the fish scriptableObject is assigned
         if (other.CompareTag("Player") && catchableFish != null)
-        {   
+        {
+            Debug.Log("Player entered Fishing Area");
             // check if there are any fish left and for input
             if (numOfFish > 0)
             {
-                if (interactAction.WasPressedThisFrame())
+                Debug.Log("There is fish here");
+                if (interactAction.IsPressed())
                 {
                     // activate fishing mode.
                     Debug.Log("You Are Fishing!!!");

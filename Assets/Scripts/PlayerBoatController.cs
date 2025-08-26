@@ -22,22 +22,22 @@ namespace Player
 
         private void Awake()
         {
+            // subscribe to the input in you in you input actions asset
             moveAction = InputSystem.actions.FindAction("Move");
         }
 
         private void FixedUpdate()
         {
+            // assign the values read from the input system to a vector 2
             moveAmount = moveAction.ReadValue<Vector2>();
+            // Forward or Backward movement input is assigned to the y of the vactor 2
             float verticalInput = moveAmount.y;
+            // Left or Right torque/rotational input is assigned to the x of the vector 2
             float horizontalInput = moveAmount.x;
 
-            // forward or backward movement input
-            //float verticalInput = Input.GetAxis("Vertical");
             // adds a force to push forward
             body.AddRelativeForce(Vector3.forward * verticalInput * playerMoveSpeed);
 
-            // Left or Right torque/rotational input
-            //float horizontalInput = Input.GetAxis("Horizontal");
             // adds a torque for rotation
             body.AddRelativeTorque(Vector3.up * horizontalInput * playerRotSpeed);
         }
