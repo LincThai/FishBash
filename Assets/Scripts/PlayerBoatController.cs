@@ -22,7 +22,7 @@ namespace Player
 
         private void Awake()
         {
-            // subscribe to the input in you in you input actions asset
+            // subscribe to the input in your input actions asset
             moveAction = InputSystem.actions.FindAction("Move");
         }
 
@@ -40,6 +40,9 @@ namespace Player
 
             // adds a torque for rotation
             body.AddRelativeTorque(Vector3.up * horizontalInput * playerRotSpeed);
+
+            //float volume = body.linearVelocity.magnitude / 30;
+            //body.linearVelocity.magnitude
         }
 
     }

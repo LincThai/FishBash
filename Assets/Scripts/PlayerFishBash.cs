@@ -16,16 +16,20 @@ public class PlayerFishBash : MonoBehaviour
     [Header("References")]
     public GameObject fishBashUi;
     public GameObject playerHealthBar;
+    public EnemyFishBashed enemyToBash;
     public FishingAreaTrigger fishAreaTrigger;
 
     // inputs
     private InputAction guardAction;
-    private InputAction AttackActionL;
-    private InputAction AttackActionR;
+    private InputAction attackActionL;
+    private InputAction attackActionR;
 
-    private void OnEnable()
+    private void Awake()
     {
-        
+        // subscribe to the inputs in your input actions asset
+        guardAction = InputSystem.actions.FindAction("Jump");
+        attackActionL = InputSystem.actions.FindAction("AttackLeft");
+        attackActionR = InputSystem.actions.FindAction("AttackRight");
     }
 
     // Update is called once per frame
@@ -36,9 +40,13 @@ public class PlayerFishBash : MonoBehaviour
 
     public void PlayerAttack()
     {
-        // apply damage to enemy
+        // apply damage to enemy using the enemy's take damage function
+        enemyToBash.EnemyTakeDamage(playerDamage);
+
         // animate the attack
+
         // play the sound
+
     }
 
     public void PlayerTakeDamage(int damageTaken)
@@ -50,7 +58,7 @@ public class PlayerFishBash : MonoBehaviour
             playerCurrentLives -= damageTaken;
 
             // play damage sound and animation
-
+        
             // check if player has less than or 0 lives/health
             if (playerCurrentLives <= 0)
             {

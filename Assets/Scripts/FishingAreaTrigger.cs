@@ -12,9 +12,11 @@ public class FishingAreaTrigger : MonoBehaviour
 
     // minigame reference
     public GameObject FishBashUI;
+ 
 
     private void Awake()
     {
+        // subscribe to the input in your input actions asset
         interactAction = InputSystem.actions.FindAction("Interact");
     }
 
@@ -33,6 +35,7 @@ public class FishingAreaTrigger : MonoBehaviour
                     // activate fishing mode.
                     Debug.Log("You Are Fishing!!!");
                     FishBashUI.SetActive(true);
+                    OnFishingActionSFX();
                     // maybe call a function to update the number of fish
                 }
             }
@@ -42,6 +45,11 @@ public class FishingAreaTrigger : MonoBehaviour
                 Debug.Log("NO FISH AVAILABLE!!!");
             }
         }
+    }
+
+    private void OnFishingActionSFX()
+    {
+
     }
 
 }
