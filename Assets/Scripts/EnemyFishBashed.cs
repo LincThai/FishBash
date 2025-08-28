@@ -24,8 +24,15 @@ public class EnemyFishBashed : MonoBehaviour
     public GameObject enemyHealthBar;
     private Fish currentFish;
 
+
+    private void Awake()
+    {
+        GameManager.instance._EnemyFishBashed = this;
+    }
     private void OnEnable()
     {
+        GameManager.instance._EnemyFishBashed = this;
+
         // assigning the current fish to bash in the minigame from the trigger
         currentFish = fishingAreaTrigger.catchableFish;
         fishSprite.sprite = currentFish.fishSprite;
@@ -73,11 +80,11 @@ public class EnemyFishBashed : MonoBehaviour
 
     public void EnemyDeath()
     {
-        // close the minigame/UI
-        fishBashUI.SetActive(false);
-
         // update the fishing area trigger
         fishingAreaTrigger.numOfFish -= 1;
+
+        // close the minigame/UI
+        fishBashUI.SetActive(false);
     }
 
 }

@@ -26,6 +26,8 @@ public class PlayerFishBash : MonoBehaviour
 
     private void Awake()
     {
+        GameManager.instance._PlayerFishBash = this;
+
         // subscribe to the inputs in your input actions asset
         guardAction = InputSystem.actions.FindAction("Jump");
         attackActionL = InputSystem.actions.FindAction("AttackLeft");
@@ -34,6 +36,8 @@ public class PlayerFishBash : MonoBehaviour
 
     private void OnEnable()
     {
+        GameManager.instance._PlayerFishBash = this;
+
         playerCurrentLives = playerMaxLives;
     }
 
@@ -98,9 +102,10 @@ public class PlayerFishBash : MonoBehaviour
     {
         // play lose sound
 
+        // update the fishing area trigger
+        fishAreaTrigger.numOfFish -= 1;
+
         // deactivate the ui
         fishBashUi.SetActive(false);
-
-        // update the fishing area trigger
     }
 }
