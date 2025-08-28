@@ -32,10 +32,34 @@ public class PlayerFishBash : MonoBehaviour
         attackActionR = InputSystem.actions.FindAction("AttackRight");
     }
 
+    private void OnEnable()
+    {
+        playerCurrentLives = playerMaxLives;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        // check if the player is guarding
+        if (guardAction.IsPressed())
+        {
+            // change the bool
+            isGuarding = true;
+
+            // do the animation
+        }
+        else { isGuarding = false; }
+
+        if (attackActionL.IsPressed())
+        {
+            // call the attack function passing in the left hand animation
+            PlayerAttack();
+        }
+        if (attackActionR.IsPressed())
+        {
+            // call the attack function passing in the right hand animation
+            PlayerAttack();
+        }
     }
 
     public void PlayerAttack()
@@ -56,6 +80,7 @@ public class PlayerFishBash : MonoBehaviour
         {
             // reduce life/health
             playerCurrentLives -= damageTaken;
+            Debug.Log("Player Lives = " + playerCurrentLives);
 
             // play damage sound and animation
         

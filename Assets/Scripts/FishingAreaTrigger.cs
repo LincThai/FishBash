@@ -11,13 +11,25 @@ public class FishingAreaTrigger : MonoBehaviour
     private InputAction interactAction;
 
     // minigame reference
-    public GameObject FishBashUI;
+    public GameObject fishBashUI;
+    public PlayerFishBash player;
+    public EnemyFishBashed enemyFish;
  
 
     private void Awake()
     {
         // subscribe to the input in your input actions asset
         interactAction = InputSystem.actions.FindAction("Interact");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // set this trigger to these variables
+            player.fishAreaTrigger = this;
+            enemyFish.fishingAreaTrigger = this;
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -34,7 +46,7 @@ public class FishingAreaTrigger : MonoBehaviour
                 {
                     // activate fishing mode.
                     Debug.Log("You Are Fishing!!!");
-                    FishBashUI.SetActive(true);
+                    fishBashUI.SetActive(true);
                     OnFishingActionSFX();
                     // maybe call a function to update the number of fish
                 }
@@ -44,6 +56,16 @@ public class FishingAreaTrigger : MonoBehaviour
                 // possibly call a destroy gameobject function or call it in update
                 Debug.Log("NO FISH AVAILABLE!!!");
             }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // empty the values in these scripts
+            player.fishAreaTrigger = null;
+            enemyFish.fishingAreaTrigger = null;
         }
     }
 
