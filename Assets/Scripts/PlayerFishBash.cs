@@ -15,7 +15,7 @@ public class PlayerFishBash : MonoBehaviour
     // references
     [Header("References")]
     public GameObject fishBashUi;
-    public GameObject playerHealthBar;
+    public HealthBar playerHealthBar;
     public EnemyFishBashed enemyToBash;
     public FishingAreaTrigger fishAreaTrigger;
 
@@ -26,6 +26,7 @@ public class PlayerFishBash : MonoBehaviour
 
     private void Awake()
     {
+        // connect to game manager
         GameManager.instance._PlayerFishBash = this;
 
         // subscribe to the inputs in your input actions asset
@@ -36,9 +37,12 @@ public class PlayerFishBash : MonoBehaviour
 
     private void OnEnable()
     {
+        // connect to game manager
         GameManager.instance._PlayerFishBash = this;
 
+        // set the life/health of player for both game and UI
         playerCurrentLives = playerMaxLives;
+        playerHealthBar.SetMaxHealth(playerMaxLives);
     }
 
     // Update is called once per frame
@@ -85,6 +89,9 @@ public class PlayerFishBash : MonoBehaviour
             // reduce life/health
             playerCurrentLives -= damageTaken;
             Debug.Log("Player Lives = " + playerCurrentLives);
+
+            // update in UI
+            playerHealthBar.SetHealth(playerCurrentLives);
 
             // play damage sound and animation
         
