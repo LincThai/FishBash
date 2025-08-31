@@ -707,7 +707,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7011807383513262429}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -897,7 +897,7 @@ RectTransform:
   m_Father: {fileID: 1755339406373924778}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1110,7 +1110,7 @@ RectTransform:
   m_Father: {fileID: 2053401423936236498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1595,7 +1595,7 @@ MonoBehaviour:
   playerAttackCooldown: 5
   isGuarding: 0
   fishBashUi: {fileID: 6771629121679478630}
-  playerHealthBar: {fileID: 741385889809184808}
+  playerHealthBar: {fileID: 572175384716017104}
   enemyToBash: {fileID: 7183466501177092044}
   fishAreaTrigger: {fileID: 0}
 --- !u!1 &5383100353592594530
@@ -1765,7 +1765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7853626402448411416
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1881,10 +1881,10 @@ MonoBehaviour:
   enemyAttackRate: 2
   enemyChargeTime: 2
   fishBashUI: {fileID: 6771629121679478630}
+  fishSprite: {fileID: 3147198916899992896}
+  enemyHealthBar: {fileID: 2401296263312830329}
   playerToBash: {fileID: 4237057296738858821}
   fishingAreaTrigger: {fileID: 0}
-  fishSprite: {fileID: 3147198916899992896}
-  enemyHealthBar: {fileID: 3739482536800319877}
 --- !u!1 &7694982753901460408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1898,7 +1898,6 @@ GameObject:
   - component: {fileID: 926901969844691398}
   - component: {fileID: 3923989355036878328}
   - component: {fileID: 8352359755917865979}
-  - component: {fileID: 1676339071893357561}
   m_Layer: 5
   m_Name: GameUI
   m_TagString: Untagged
@@ -2004,19 +2003,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 8732887316791081311}
---- !u!114 &1676339071893357561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7694982753901460408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c8082d922c933e489c4f846bb9335f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 0}
 --- !u!1 &8732887316791081311
 GameObject:
   m_ObjectHideFlags: 0
@@ -2326,11 +2312,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
---- !u!1 &7011807383513262429 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5998492855509086607, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
-  m_PrefabInstance: {fileID: 3634436590904973522}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7460170728702534659 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6194636494905703633, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}

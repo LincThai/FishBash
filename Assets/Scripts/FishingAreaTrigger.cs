@@ -24,8 +24,7 @@ public class FishingAreaTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // set this trigger to these variables
-            GameManager.instance._EnemyFishBashed.fishingAreaTrigger = this;
-            GameManager.instance._PlayerFishBash.fishAreaTrigger = this;
+            GameManager.instance.currentFishArea = this;
         }
     }
 
@@ -61,8 +60,7 @@ public class FishingAreaTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // empty the values in these scripts
-            GameManager.instance._EnemyFishBashed.fishingAreaTrigger = null;
-            GameManager.instance._PlayerFishBash.fishAreaTrigger = null;
+            GameManager.instance.currentFishArea = null;
         }
     }
 

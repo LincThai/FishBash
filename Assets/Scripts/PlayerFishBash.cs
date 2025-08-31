@@ -40,6 +40,8 @@ public class PlayerFishBash : MonoBehaviour
         // connect to game manager
         GameManager.instance._PlayerFishBash = this;
 
+        fishAreaTrigger = GameManager.instance.currentFishArea;
+
         // set the life/health of player for both game and UI
         playerCurrentLives = playerMaxLives;
         playerHealthBar.SetMaxHealth(playerMaxLives);

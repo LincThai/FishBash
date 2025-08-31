@@ -37,6 +37,9 @@ public class EnemyFishBashed : MonoBehaviour
         // connect to game manager
         GameManager.instance._EnemyFishBashed = this;
 
+        // assign fishing area trigger
+        fishingAreaTrigger = GameManager.instance.currentFishArea;
+
         // assigning the current fish to bash in the minigame from the trigger
         currentFish = fishingAreaTrigger.catchableFish;
         fishSprite.sprite = currentFish.fishSprite;
@@ -56,7 +59,7 @@ public class EnemyFishBashed : MonoBehaviour
             EnemyAttack();
 
             // update for next attack
-            nextAttackTime = Time.time + 1f / enemyAttackRate;
+            nextAttackTime = Time.time + 5f / enemyAttackRate;
         }
     }
 
