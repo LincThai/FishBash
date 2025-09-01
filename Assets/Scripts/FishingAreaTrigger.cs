@@ -12,9 +12,6 @@ public class FishingAreaTrigger : MonoBehaviour
 
     // minigame reference
     public GameObject fishBashUI;
-    public PlayerFishBash player;
-    public EnemyFishBashed enemyFish;
- 
 
     private void Awake()
     {
@@ -27,8 +24,7 @@ public class FishingAreaTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // set this trigger to these variables
-            player.fishAreaTrigger = this;
-            enemyFish.fishingAreaTrigger = this;
+            GameManager.instance.currentFishArea = this;
         }
     }
 
@@ -64,8 +60,7 @@ public class FishingAreaTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             // empty the values in these scripts
-            player.fishAreaTrigger = null;
-            enemyFish.fishingAreaTrigger = null;
+            GameManager.instance.currentFishArea = null;
         }
     }
 

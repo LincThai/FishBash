@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.Networking.PlayerConnection;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,19 +19,34 @@ public class EnemyFishBashed : MonoBehaviour
     // references
     [Header("References")]
     public GameObject fishBashUI;
+    public Image fishSprite;
+    public HealthBar enemyHealthBar;
     public PlayerFishBash playerToBash;
     public FishingAreaTrigger fishingAreaTrigger;
-    public Image fishSprite;
-    public GameObject enemyHealthBar;
+
     private Fish currentFish;
 
+
+    private void Awake()
+    {
+        // connect to game manager
+        GameManager.instance._EnemyFishBashed = this;
+    }
     private void OnEnable()
     {
+        // connect to game manager
+        GameManager.instance._EnemyFishBashed = this;
+
+        // assign fishing area trigger
+        fishingAreaTrigger = GameManager.instance.currentFishArea;
+
         // assigning the current fish to bash in the minigame from the trigger
         currentFish = fishingAreaTrigger.catchableFish;
         fishSprite.sprite = currentFish.fishSprite;
 
+        // set the health of the enemy for both the game and UI
         enemyCurrentHealth = enemyMaxHealth;
+        enemyHealthBar.SetMaxHealth(enemyMaxHealth);
     }
 
     // Update is called once per frame
@@ -43,7 +59,7 @@ public class EnemyFishBashed : MonoBehaviour
             EnemyAttack();
 
             // update for next attack
-            nextAttackTime = Time.time + 1f / enemyAttackRate;
+            nextAttackTime = Time.time + 5f / enemyAttackRate;
         }
     }
 
@@ -63,6 +79,9 @@ public class EnemyFishBashed : MonoBehaviour
         enemyCurrentHealth -= damage;
         Debug.Log("Enemy Health = " + enemyCurrentHealth);
 
+        // update the UI
+        enemyHealthBar.SetHealth(enemyCurrentHealth);
+
         // play enemy damaged sound and animation
 
         if (enemyCurrentHealth <= 0)
@@ -73,11 +92,11 @@ public class EnemyFishBashed : MonoBehaviour
 
     public void EnemyDeath()
     {
-        // close the minigame/UI
-        fishBashUI.SetActive(false);
-
         // update the fishing area trigger
         fishingAreaTrigger.numOfFish -= 1;
+
+        // close the minigame/UI
+        fishBashUI.SetActive(false);
     }
 
 }

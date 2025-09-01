@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba813987c424fd43b89d1bb6f7e8926, type: 3}
   m_Name: JaysFish
   m_EditorClassIdentifier: 
-  fishName: 
-  description: 
-  fishSprite: {fileID: 0}
+  fishName: JaysFish
+  description: Like many who love these shoes these fish alway wear and care for
+    these shoes. Their Jays are their life and and damage or dirt on their Jays will
+    make them lose control in unhindered anger.
+  fishSprite: {fileID: 21300000, guid: ff3d158b14c812d4589f1fce1ce2bb5f, type: 3}
