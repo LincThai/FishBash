@@ -9,8 +9,11 @@ public class PlayerFishBash : MonoBehaviour
     public int playerMaxLives = 3;
     public int playerCurrentLives;
     public int playerDamage = 1;
-    public int playerAttackCooldown = 5;
+    public float playerAttackCooldown = 3f;
     public bool isGuarding = false;
+
+    private float nextLeftPunch;
+    private float nextRightPunch;
 
     // references
     [Header("References")]
@@ -60,15 +63,19 @@ public class PlayerFishBash : MonoBehaviour
         }
         else { isGuarding = false; }
 
-        if (attackActionL.IsPressed())
+        if (attackActionL.IsPressed() && Time.time >= nextLeftPunch)
         {
             // call the attack function passing in the left hand animation
             PlayerAttack();
+            // add cooldown
+            nextLeftPunch = Time.time + playerAttackCooldown;
         }
-        if (attackActionR.IsPressed())
+        if (attackActionR.IsPressed() && Time.time >= nextRightPunch)
         {
             // call the attack function passing in the right hand animation
             PlayerAttack();
+            // add cooldown
+            nextRightPunch = Time.time + playerAttackCooldown;
         }
     }
 

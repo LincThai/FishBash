@@ -26,6 +26,11 @@ namespace Player
             moveAction = InputSystem.actions.FindAction("Move");
         }
 
+        private void Start()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
         private void FixedUpdate()
         {
             // assign the values read from the input system to a vector 2
