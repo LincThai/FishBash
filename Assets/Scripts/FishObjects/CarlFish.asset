@@ -16,4 +16,4 @@ MonoBehaviour:
   description: A Fish with a chiselled jawline and a robust physique from extreme
     workouts. They love to work out in groups to show off the muscular well defined
     abs.
-  fishSprite: {fileID: 0}
+  fishSprite: {fileID: 21300000, guid: 62780aba7f3a11d4280142849c45c100, type: 3}
