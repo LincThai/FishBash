@@ -2729,10 +2729,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Revised blockout
       objectReference: {fileID: 0}
+    - target: {fileID: 1697818604614141549, guid: 2578f393ca40e4641a0847bd4d1eeac9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3268b0b5fb9bbb3438f71863c076c40e, type: 2}
+    - target: {fileID: 7920186679267390249, guid: 2578f393ca40e4641a0847bd4d1eeac9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3268b0b5fb9bbb3438f71863c076c40e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4860307685997346714, guid: 2578f393ca40e4641a0847bd4d1eeac9, type: 3}
     - {fileID: -7787348234849528582, guid: 2578f393ca40e4641a0847bd4d1eeac9, type: 3}
+    - {fileID: -6599233919940496880, guid: 2578f393ca40e4641a0847bd4d1eeac9, type: 3}
+    - {fileID: -4197091095869971504, guid: 2578f393ca40e4641a0847bd4d1eeac9, type: 3}
+    - {fileID: -8900633040755535548, guid: 2578f393ca40e4641a0847bd4d1eeac9, type: 3}
+    - {fileID: 2331532444991847095, guid: 2578f393ca40e4641a0847bd4d1eeac9, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2578f393ca40e4641a0847bd4d1eeac9, type: 3}
