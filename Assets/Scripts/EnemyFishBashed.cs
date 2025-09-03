@@ -34,15 +34,12 @@ public class EnemyFishBashed : MonoBehaviour
 
         // assigning the current fish to bash in the minigame from the trigger
         currentFish = fishingAreaTrigger.catchableFish;
-        Debug.Log(currentFish);
         enemySprite.sprite = currentFish.fishSprite;
 
         // set the health of the enemy for both the game and UI
         enemyCurrentHealth = enemyMaxHealth;
         enemyHealthBar.SetMaxHealth(enemyMaxHealth);
         enemyHealthBar.SetHealth(enemyCurrentHealth);
-
-        Debug.Log("Enemy Health reset");
     }
 
     // Update is called once per frame

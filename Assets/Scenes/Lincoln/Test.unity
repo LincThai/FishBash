@@ -272,6 +272,17 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!114 &458225917 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8352359755917865979, guid: 6a53ad5f803668d41afaf550dd240e5c, type: 3}
+  m_PrefabInstance: {fileID: 1831242895037109066}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: debca46d30befa446becd572a40d81cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &477351966 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8606189293040092591, guid: 9a08054a935a05f4dab3a835e387f885, type: 3}
@@ -526,6 +537,11 @@ MonoBehaviour:
   length: 2
   speed: 1
   offset: 0
+--- !u!1 &1615263807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7011807383513262429, guid: 6a53ad5f803668d41afaf550dd240e5c, type: 3}
+  m_PrefabInstance: {fileID: 1831242895037109066}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1953524391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8108488181824758805, guid: 59a5e545ee1cf854084e7481990233fc, type: 3}
@@ -583,6 +599,10 @@ PrefabInstance:
       propertyPath: fishBashUI
       value: 
       objectReference: {fileID: 731770104}
+    - target: {fileID: 7609994430885395593, guid: 59a5e545ee1cf854084e7481990233fc, type: 3}
+      propertyPath: catchableFish
+      value: 
+      objectReference: {fileID: 11400000, guid: 4b3b34de7ec71de4da388035cb5a22ca, type: 2}
     - target: {fileID: 8108488181824758805, guid: 59a5e545ee1cf854084e7481990233fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -773,9 +793,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3496251494322377303, guid: 6a53ad5f803668d41afaf550dd240e5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 458225917}
+    - target: {fileID: 3496251494322377303, guid: 6a53ad5f803668d41afaf550dd240e5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 3496251494322377303, guid: 6a53ad5f803668d41afaf550dd240e5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5692672561217639574, guid: 6a53ad5f803668d41afaf550dd240e5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1615263807}
+    - target: {fileID: 5692672561217639574, guid: 6a53ad5f803668d41afaf550dd240e5c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6665629465183166242, guid: 6a53ad5f803668d41afaf550dd240e5c, type: 3}
+      propertyPath: m_text
+      value: Resume
+      objectReference: {fileID: 0}
     - target: {fileID: 7694982753901460408, guid: 6a53ad5f803668d41afaf550dd240e5c, type: 3}
       propertyPath: m_Name
       value: GameUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 8400752916096003023, guid: 6a53ad5f803668d41afaf550dd240e5c, type: 3}
+      propertyPath: m_text
+      value: Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 8732887316791081311, guid: 6a53ad5f803668d41afaf550dd240e5c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
