@@ -17,8 +17,8 @@ The content you should expect is the basic level/world block out for the main ar
 
 Bugs/Issues
 - The boat and shader waves don't match up.
-- No animation in the fishbash mechanic therefore to feedback
-- No Sounds have been implemented
+- No animation in the fish bash mechanic therefore no feedback
+- No other Sounds have been implemented other than the background music.
 
 Citations
 Code References
