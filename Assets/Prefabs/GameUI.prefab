@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 1500031417749996906}
   - component: {fileID: 572175384716017104}
   m_Layer: 5
-  m_Name: HealthBar
+  m_Name: PlayerHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1239,7 +1239,7 @@ GameObject:
   - component: {fileID: 3350840407102900636}
   - component: {fileID: 2401296263312830329}
   m_Layer: 5
-  m_Name: HealthBar
+  m_Name: EnemyHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1881,7 +1881,7 @@ MonoBehaviour:
   enemyAttackRate: 2
   enemyChargeTime: 2
   fishBashUI: {fileID: 6771629121679478630}
-  fishSprite: {fileID: 3147198916899992896}
+  enemySprite: {fileID: 3147198916899992896}
   enemyHealthBar: {fileID: 2401296263312830329}
   playerToBash: {fileID: 4237057296738858821}
   fishingAreaTrigger: {fileID: 0}
