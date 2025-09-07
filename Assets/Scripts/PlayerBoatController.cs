@@ -46,6 +46,9 @@ namespace Player
             // adds a torque for rotation
             body.AddRelativeTorque(Vector3.up * horizontalInput * playerRotSpeed);
 
+            // play audio
+            FindObjectOfType<AudioManager>().Play("Motor");
+
             //float volume = body.linearVelocity.magnitude / 30;
             //body.linearVelocity.magnitude
         }

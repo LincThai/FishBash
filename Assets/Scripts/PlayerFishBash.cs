@@ -91,6 +91,7 @@ public class PlayerFishBash : MonoBehaviour
         // animate the attack
 
         // play the sound
+        FindObjectOfType<AudioManager>().Play("Punch");
 
     }
 
@@ -106,6 +107,7 @@ public class PlayerFishBash : MonoBehaviour
             playerHealthBar.SetHealth(playerCurrentLives);
 
             // play damage sound and animation
+            FindObjectOfType<AudioManager>().Play("Hurt");
         
             // check if player has less than or 0 lives/health
             if (playerCurrentLives <= 0)
@@ -119,6 +121,7 @@ public class PlayerFishBash : MonoBehaviour
     public void PlayerDeath()
     {
         // play lose sound
+        FindObjectOfType<AudioManager>().Play("Death");
 
         // update the fishing area trigger
         fishAreaTrigger.numOfFish -= 1;

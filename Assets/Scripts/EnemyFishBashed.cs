@@ -65,6 +65,7 @@ public class EnemyFishBashed : MonoBehaviour
         // animate the attack
 
         // play the sound
+        FindObjectOfType<AudioManager>().Play("PunchHeavy");
     }
 
     public void EnemyTakeDamage(int damage)
@@ -77,6 +78,7 @@ public class EnemyFishBashed : MonoBehaviour
         enemyHealthBar.SetHealth(enemyCurrentHealth);
 
         // play enemy damaged sound and animation
+        FindObjectOfType<AudioManager>().Play("Hurt");
 
         if (enemyCurrentHealth <= 0)
         {
@@ -91,6 +93,9 @@ public class EnemyFishBashed : MonoBehaviour
 
         // close the minigame/UI
         fishBashUI.SetActive(false);
+
+        // play death sound
+        FindObjectOfType<AudioManager>().Play("Death");
     }
 
 }

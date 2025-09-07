@@ -10,6 +10,8 @@ public class FishingAreaTrigger : MonoBehaviour
     // Inputs
     private InputAction interactAction;
 
+    // popup reference
+    public GameObject popupControls;
     // minigame reference
     public GameObject fishBashUI;
 
@@ -25,6 +27,11 @@ public class FishingAreaTrigger : MonoBehaviour
         {
             // set this trigger to these variables
             GameManager.instance.currentFishArea = this;
+
+            if (numOfFish > 0)
+            {
+                // open a pop up to display the key to start fishing
+            }
         }
     }
 
@@ -61,6 +68,18 @@ public class FishingAreaTrigger : MonoBehaviour
         {
             // empty the values in these scripts
             GameManager.instance.currentFishArea = null;
+
+            if (numOfFish <= 0)
+            {
+                // turn off popup
+                // when there is no more fish
+                Destroy(this);
+            }
+            else 
+            {
+                // turn off popup
+
+            }
         }
     }
 
