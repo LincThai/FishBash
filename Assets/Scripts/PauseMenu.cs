@@ -43,7 +43,7 @@ public class PauseMenu : MonoBehaviour
     // Method of pausing the game
     void Pause()
     {
-        // activate ther pause menu.
+        // activate the pause menu.
         pauseMenuUI.SetActive(true);
         //Stop time by changing time scale to 0
         Time.timeScale = 0f;

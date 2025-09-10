@@ -12,7 +12,7 @@ public class EnemyFishBashed : MonoBehaviour
     public float enemyAttackRate = 2f;
     public float enemyChargeTime = 2f;
 
-    private float nextAttackTime = 3f;
+    private float nextAttackTime = 5f;
 
     // references
     [Header("References")]
@@ -24,12 +24,6 @@ public class EnemyFishBashed : MonoBehaviour
 
     private Fish currentFish;
 
-
-    private void Awake()
-    {
-        // connect to game manager
-        GameManager.instance._EnemyFishBashed = this;
-    }
     private void OnEnable()
     {
         // connect to game manager
@@ -45,11 +39,13 @@ public class EnemyFishBashed : MonoBehaviour
         // set the health of the enemy for both the game and UI
         enemyCurrentHealth = enemyMaxHealth;
         enemyHealthBar.SetMaxHealth(enemyMaxHealth);
+        enemyHealthBar.SetHealth(enemyCurrentHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(enemyCurrentHealth);
         // for the rate of attack
         if (Time.time >= nextAttackTime)
         {
@@ -69,6 +65,7 @@ public class EnemyFishBashed : MonoBehaviour
         // animate the attack
 
         // play the sound
+        FindObjectOfType<AudioManager>().Play("PunchHeavy");
     }
 
     public void EnemyTakeDamage(int damage)
@@ -81,6 +78,7 @@ public class EnemyFishBashed : MonoBehaviour
         enemyHealthBar.SetHealth(enemyCurrentHealth);
 
         // play enemy damaged sound and animation
+        FindObjectOfType<AudioManager>().Play("Hurt");
 
         if (enemyCurrentHealth <= 0)
         {
@@ -95,6 +93,9 @@ public class EnemyFishBashed : MonoBehaviour
 
         // close the minigame/UI
         fishBashUI.SetActive(false);
+
+        // play death sound
+        FindObjectOfType<AudioManager>().Play("Death");
     }
 
 }

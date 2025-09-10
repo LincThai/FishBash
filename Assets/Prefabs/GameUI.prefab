@@ -276,7 +276,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: Settings
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 1500031417749996906}
   - component: {fileID: 572175384716017104}
   m_Layer: 5
-  m_Name: HealthBar
+  m_Name: PlayerHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -515,7 +515,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: Resume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -707,7 +707,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 7011807383513262429}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -852,9 +852,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: StartButton
+      - m_Target: {fileID: 8352359755917865979}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1239,7 +1239,7 @@ GameObject:
   - component: {fileID: 3350840407102900636}
   - component: {fileID: 2401296263312830329}
   m_Layer: 5
-  m_Name: HealthBar
+  m_Name: EnemyHealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1881,7 +1881,7 @@ MonoBehaviour:
   enemyAttackRate: 2
   enemyChargeTime: 2
   fishBashUI: {fileID: 6771629121679478630}
-  fishSprite: {fileID: 3147198916899992896}
+  enemySprite: {fileID: 3147198916899992896}
   enemyHealthBar: {fileID: 2401296263312830329}
   playerToBash: {fileID: 4237057296738858821}
   fishingAreaTrigger: {fileID: 0}
@@ -2247,6 +2247,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6176118191522496568, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 8732887316791081311}
+    - target: {fileID: 6176118191522496568, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6194636494905703633, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2336,6 +2344,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
+--- !u!1 &7011807383513262429 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5998492855509086607, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
+  m_PrefabInstance: {fileID: 3634436590904973522}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &7460170728702534659 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6194636494905703633, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
