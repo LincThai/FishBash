@@ -52,6 +52,20 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
     mixerGroup: {fileID: -5333085382064497465, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: BGM2
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+    mixerGroup: {fileID: -5333085382064497465, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Hurt
+    clip: {fileID: 0}
+    volume: 0
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
   - name: 
     clip: {fileID: 0}
     volume: 0

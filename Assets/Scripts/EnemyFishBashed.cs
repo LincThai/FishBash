@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,7 @@ public class EnemyFishBashed : MonoBehaviour
     // references
     [Header("References")]
     public GameObject fishBashUI;
+    public TMP_Text fishTag;
     public Image enemySprite;
     public HealthBar enemyHealthBar;
     public PlayerFishBash playerToBash;
@@ -34,6 +36,7 @@ public class EnemyFishBashed : MonoBehaviour
 
         // assigning the current fish to bash in the minigame from the trigger
         currentFish = fishingAreaTrigger.catchableFish;
+        fishTag.text = currentFish.fishName;
         enemySprite.sprite = currentFish.fishSprite;
 
         // set the health of the enemy for both the game and UI
