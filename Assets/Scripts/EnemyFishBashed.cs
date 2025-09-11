@@ -68,7 +68,7 @@ public class EnemyFishBashed : MonoBehaviour
         // animate the attack
 
         // play the sound
-        FindObjectOfType<AudioManager>().Play("PunchHeavy");
+        FindObjectOfType<AudioManager>().Play("HeavyPunch");
     }
 
     public void EnemyTakeDamage(int damage)
