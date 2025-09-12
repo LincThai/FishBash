@@ -44,10 +44,12 @@ public class FishingAreaTrigger : MonoBehaviour
             // check if there are any fish left and for input
             if (numOfFish > 0)
             {
+                popupControls.SetActive(true);
                 if (interactAction.IsPressed())
                 {
                     // activate fishing mode.
                     fishBashUI.SetActive(true);
+                    popupControls.SetActive(false);
                     OnFishingActionSFX();
                     // maybe call a function to update the number of fish
                 }
