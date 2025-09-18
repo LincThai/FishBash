@@ -21,6 +21,7 @@ public class EnemyFishBashed : MonoBehaviour
     [Header("References")]
     public GameObject fishBashUI;
     public TMP_Text fishTag;
+    public TMP_Text resultsText;
     public Image enemySprite;
     public HealthBar enemyHealthBar;
     public PlayerFishBash playerToBash;
@@ -122,14 +123,16 @@ public class EnemyFishBashed : MonoBehaviour
 
     public void EnemyDeath()
     {
+        // play death sound
+        FindObjectOfType<AudioManager>().Play("Death");
+
         // update the fishing area trigger
         fishingAreaTrigger.numOfFish -= 1;
 
+        // 
+
         // close the minigame/UI
         fishBashUI.SetActive(false);
-
-        // play death sound
-        FindObjectOfType<AudioManager>().Play("Death");
     }
 
 }

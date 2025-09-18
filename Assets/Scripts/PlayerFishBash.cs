@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -21,6 +22,7 @@ public class PlayerFishBash : MonoBehaviour
     public HealthBar playerHealthBar;
     public EnemyFishBashed enemyToBash;
     public FishingAreaTrigger fishAreaTrigger;
+    public TMP_Text resultsText;
 
     // inputs
     private InputAction guardAction;
