@@ -8,5 +8,13 @@ public class Fish : ScriptableObject
     // sizes up the text space im the inspector
     [TextArea(1, 10)]
     public string description;
+    // UI/Animation
     public Sprite fishSprite;
+    // Combat Data
+    public int MaxHealth = 3;
+    public int damage = 1;
+    public float attackMaxCooldown = 3;
+    public float attackMinCooldown = 1;
+    public float attackChargeTime = 2;
+
 }

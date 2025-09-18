@@ -8,12 +8,12 @@ public class EnemyFishBashed : MonoBehaviour
     // set variables
     // enemy Variables
     [Header("Editable Variables")]
-    public int enemyMaxHealth = 3;
+    public int enemyMaxHealth;
     public int enemyCurrentHealth;
-    public int enemyDamage = 1;
-    public float enemyAttackCooldownMax = 3f;
-    public float enemyAttackCooldownMin = 1f;
-    public float enemyChargeTime = 2f;
+    public int enemyDamage;
+    public float enemyAttackCooldownMax;
+    public float enemyAttackCooldownMin;
+    public float enemyChargeTime;
     // states
     int state = 0; //0 = ready, 1 = attack, 2 = cooldown
 
@@ -38,8 +38,15 @@ public class EnemyFishBashed : MonoBehaviour
 
         // assigning the current fish to bash in the minigame from the trigger
         currentFish = fishingAreaTrigger.catchableFish;
+        // Assigning UI element Info
         fishTag.text = currentFish.fishName;
         enemySprite.sprite = currentFish.fishSprite;
+        // Assign Enemy Data
+        enemyMaxHealth = currentFish.MaxHealth;
+        enemyDamage = currentFish.damage;
+        enemyAttackCooldownMax = currentFish.attackMaxCooldown;
+        enemyAttackCooldownMin = currentFish.attackMinCooldown;
+        enemyChargeTime = currentFish.attackChargeTime;
 
         // set the health of the enemy for both the game and UI
         enemyCurrentHealth = enemyMaxHealth;
