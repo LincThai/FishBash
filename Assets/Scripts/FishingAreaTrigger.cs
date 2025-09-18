@@ -31,6 +31,7 @@ public class FishingAreaTrigger : MonoBehaviour
             if (numOfFish > 0)
             {
                 // open a pop up to display the key to start fishing
+                popupControls.SetActive(true);
             }
         }
     }
@@ -40,24 +41,26 @@ public class FishingAreaTrigger : MonoBehaviour
         // check if it is the player and the fish scriptableObject is assigned
         if (other.CompareTag("Player") && catchableFish != null)
         {
-            Debug.Log("Player entered Fishing Area");
             // check if there are any fish left and for input
             if (numOfFish > 0)
             {
-                Debug.Log("There is fish here");
+                popupControls.SetActive(true);
                 if (interactAction.IsPressed())
                 {
                     // activate fishing mode.
-                    Debug.Log("You Are Fishing!!!");
                     fishBashUI.SetActive(true);
+                    popupControls.SetActive(false);
                     OnFishingActionSFX();
                     // maybe call a function to update the number of fish
                 }
             }
             else
             {
-                // possibly call a destroy gameobject function or call it in update
-                Debug.Log("NO FISH AVAILABLE!!!");
+                // turn off popup
+                popupControls.SetActive(false);
+
+                // when there is no more fish
+                Destroy(this);
             }
         }
     }
@@ -72,13 +75,15 @@ public class FishingAreaTrigger : MonoBehaviour
             if (numOfFish <= 0)
             {
                 // turn off popup
+                popupControls.SetActive(false);
+
                 // when there is no more fish
                 Destroy(this);
             }
             else 
             {
                 // turn off popup
-
+                popupControls.SetActive(false);
             }
         }
     }

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba813987c424fd43b89d1bb6f7e8926, type: 3}
   m_Name: TrenchFish
   m_EditorClassIdentifier: 
-  fishName: 
+  fishName: TrenchFish
   description: 
   fishSprite: {fileID: 21300000, guid: 2f058c3c797b25f48815168dda702f72, type: 3}

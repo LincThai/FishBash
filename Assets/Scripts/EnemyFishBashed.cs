@@ -1,3 +1,5 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,14 +11,16 @@ public class EnemyFishBashed : MonoBehaviour
     public int enemyMaxHealth = 3;
     public int enemyCurrentHealth;
     public int enemyDamage = 1;
-    public float enemyAttackRate = 2f;
+    public float enemyAttackCooldownMax = 3f;
+    public float enemyAttackCooldownMin = 1f;
     public float enemyChargeTime = 2f;
-
-    private float nextAttackTime = 5f;
+    // states
+    int state = 0; //0 = ready, 1 = attack, 2 = cooldown
 
     // references
     [Header("References")]
     public GameObject fishBashUI;
+    public TMP_Text fishTag;
     public Image enemySprite;
     public HealthBar enemyHealthBar;
     public PlayerFishBash playerToBash;
@@ -34,6 +38,7 @@ public class EnemyFishBashed : MonoBehaviour
 
         // assigning the current fish to bash in the minigame from the trigger
         currentFish = fishingAreaTrigger.catchableFish;
+        fishTag.text = currentFish.fishName;
         enemySprite.sprite = currentFish.fishSprite;
 
         // set the health of the enemy for both the game and UI
@@ -45,27 +50,49 @@ public class EnemyFishBashed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(enemyCurrentHealth);
-        // for the rate of attack
-        if (Time.time >= nextAttackTime)
+        // state check to check in which the enemy is in
+        if (state == 0)
         {
-            // call the attack function
-            EnemyAttack();
+            // start the coroutine of the charged attack
+            StartCoroutine(EnemyAttack());
+            // change to the attack state
+            state = 1;
+        }
+        else if (state == 1)
+        {
 
-            // update for next attack
-            nextAttackTime = Time.time + 5f / enemyAttackRate;
+        }else if (state == 2)
+        {
+            // start the coroutine of the cooldown between the enemies attacks
+            StartCoroutine(Delay(Random.Range(enemyAttackCooldownMin, enemyAttackCooldownMax)));
         }
     }
 
-    public void EnemyAttack()
+    IEnumerator Delay(float randTime)
     {
+        // wait for a random amount of time
+        yield return new WaitForSeconds(randTime);
+        // change to the ready state
+        state = 0;
+    }
+
+    public IEnumerator EnemyAttack()
+    {
+        // start windup animation
+
+        // wait for attack charge
+        yield return new WaitForSeconds(enemyChargeTime);
+
         // apply damage to player using the player's take damage function
         playerToBash.PlayerTakeDamage(enemyDamage);
 
         // animate the attack
 
         // play the sound
-        FindObjectOfType<AudioManager>().Play("PunchHeavy");
+        FindObjectOfType<AudioManager>().Play("HeavyPunch");
+
+        // change to the cooldown state
+        state = 2;
     }
 
     public void EnemyTakeDamage(int damage)

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba813987c424fd43b89d1bb6f7e8926, type: 3}
   m_Name: OldFish
   m_EditorClassIdentifier: 
-  fishName: 
+  fishName: OldFish
   description: 
   fishSprite: {fileID: 21300000, guid: f9b6608aafd7882499a6ef36c8369a62, type: 3}
