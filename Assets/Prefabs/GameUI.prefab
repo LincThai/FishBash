@@ -1033,7 +1033,7 @@ RectTransform:
   m_Father: {fileID: 1755339406373924778}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1246,7 +1246,7 @@ RectTransform:
   m_Father: {fileID: 2053401423936236498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1737,6 +1737,8 @@ MonoBehaviour:
   playerHealthBar: {fileID: 572175384716017104}
   enemyToBash: {fileID: 7183466501177092044}
   fishAreaTrigger: {fileID: 0}
+  resultsText: {fileID: 8135077620319652591}
+  results: {fileID: 5092537143688139284}
 --- !u!1 &5092537143688139284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,7 +1756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5844936955871091060
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2176,7 +2178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7853626402448411416
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2468,6 +2470,8 @@ MonoBehaviour:
   enemyChargeTime: 2
   fishBashUI: {fileID: 6771629121679478630}
   fishTag: {fileID: 8229210752036079381}
+  resultsText: {fileID: 8135077620319652591}
+  results: {fileID: 5092537143688139284}
   enemySprite: {fileID: 3147198916899992896}
   enemyHealthBar: {fileID: 2401296263312830329}
   playerToBash: {fileID: 4237057296738858821}
