@@ -132,7 +132,7 @@ public class EnemyFishBashed : MonoBehaviour
 
         // show lose screen
         results.SetActive(true);
-        resultsText.text = "KO You Lose";
+        resultsText.text = "KO You Win";
 
         // wait till deactivate
         yield return new WaitForSeconds(3);
