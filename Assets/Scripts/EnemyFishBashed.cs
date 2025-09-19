@@ -22,6 +22,7 @@ public class EnemyFishBashed : MonoBehaviour
     public GameObject fishBashUI;
     public TMP_Text fishTag;
     public TMP_Text resultsText;
+    public GameObject results;
     public Image enemySprite;
     public HealthBar enemyHealthBar;
     public PlayerFishBash playerToBash;
@@ -117,11 +118,11 @@ public class EnemyFishBashed : MonoBehaviour
 
         if (enemyCurrentHealth <= 0)
         {
-            EnemyDeath();
+            StartCoroutine(EnemyDeath());
         }
     }
 
-    public void EnemyDeath()
+    public IEnumerator EnemyDeath()
     {
         // play death sound
         FindObjectOfType<AudioManager>().Play("Death");
@@ -129,9 +130,15 @@ public class EnemyFishBashed : MonoBehaviour
         // update the fishing area trigger
         fishingAreaTrigger.numOfFish -= 1;
 
-        // 
+        // show lose screen
+        results.SetActive(true);
+        resultsText.text = "KO You Lose";
+
+        // wait till deactivate
+        yield return new WaitForSeconds(3);
 
         // close the minigame/UI
+        results.SetActive(false);
         fishBashUI.SetActive(false);
     }
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -23,6 +24,7 @@ public class PlayerFishBash : MonoBehaviour
     public EnemyFishBashed enemyToBash;
     public FishingAreaTrigger fishAreaTrigger;
     public TMP_Text resultsText;
+    public GameObject results;
 
     // inputs
     private InputAction guardAction;
@@ -115,12 +117,12 @@ public class PlayerFishBash : MonoBehaviour
             if (playerCurrentLives <= 0)
             {
                 // kill the player
-                PlayerDeath();
+                StartCoroutine(PlayerDeath());
             }
         }
     }
 
-    public void PlayerDeath()
+    public IEnumerator PlayerDeath()
     {
         // play lose sound
         FindObjectOfType<AudioManager>().Play("Death");
@@ -128,7 +130,15 @@ public class PlayerFishBash : MonoBehaviour
         // update the fishing area trigger
         fishAreaTrigger.numOfFish -= 1;
 
+        // show lose screen
+        results.SetActive(true);
+        resultsText.text = "KO You Lose";
+
+        // wait till deactivate
+        yield return new WaitForSeconds(3);
+
         // deactivate the ui
+        results.SetActive(false);
         fishBashUi.SetActive(false);
     }
 }
