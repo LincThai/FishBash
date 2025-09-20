@@ -8,12 +8,12 @@ public class EnemyFishBashed : MonoBehaviour
     // set variables
     // enemy Variables
     [Header("Editable Variables")]
-    public int enemyMaxHealth = 3;
+    public int enemyMaxHealth;
     public int enemyCurrentHealth;
-    public int enemyDamage = 1;
-    public float enemyAttackCooldownMax = 3f;
-    public float enemyAttackCooldownMin = 1f;
-    public float enemyChargeTime = 2f;
+    public int enemyDamage;
+    public float enemyAttackCooldownMax;
+    public float enemyAttackCooldownMin;
+    public float enemyChargeTime;
     // states
     int state = 0; //0 = ready, 1 = attack, 2 = cooldown
 
@@ -21,6 +21,8 @@ public class EnemyFishBashed : MonoBehaviour
     [Header("References")]
     public GameObject fishBashUI;
     public TMP_Text fishTag;
+    public TMP_Text resultsText;
+    public GameObject results;
     public Image enemySprite;
     public HealthBar enemyHealthBar;
     public PlayerFishBash playerToBash;
@@ -38,8 +40,15 @@ public class EnemyFishBashed : MonoBehaviour
 
         // assigning the current fish to bash in the minigame from the trigger
         currentFish = fishingAreaTrigger.catchableFish;
+        // Assigning UI element Info
         fishTag.text = currentFish.fishName;
         enemySprite.sprite = currentFish.fishSprite;
+        // Assign Enemy Data
+        enemyMaxHealth = currentFish.MaxHealth;
+        enemyDamage = currentFish.damage;
+        enemyAttackCooldownMax = currentFish.attackMaxCooldown;
+        enemyAttackCooldownMin = currentFish.attackMinCooldown;
+        enemyChargeTime = currentFish.attackChargeTime;
 
         // set the health of the enemy for both the game and UI
         enemyCurrentHealth = enemyMaxHealth;
@@ -109,20 +118,28 @@ public class EnemyFishBashed : MonoBehaviour
 
         if (enemyCurrentHealth <= 0)
         {
-            EnemyDeath();
+            StartCoroutine(EnemyDeath());
         }
     }
 
-    public void EnemyDeath()
+    public IEnumerator EnemyDeath()
     {
+        // play death sound
+        FindObjectOfType<AudioManager>().Play("Death");
+
         // update the fishing area trigger
         fishingAreaTrigger.numOfFish -= 1;
 
-        // close the minigame/UI
-        fishBashUI.SetActive(false);
+        // show lose screen
+        results.SetActive(true);
+        resultsText.text = "KO You Win";
 
-        // play death sound
-        FindObjectOfType<AudioManager>().Play("Death");
+        // wait till deactivate
+        yield return new WaitForSeconds(3);
+
+        // close the minigame/UI
+        results.SetActive(false);
+        fishBashUI.SetActive(false);
     }
 
 }

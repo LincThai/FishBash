@@ -46,40 +46,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: BGM
-    clip: {fileID: 8300000, guid: 2984a894924414baa82247700b2a3550, type: 3}
+    clip: {fileID: 8300000, guid: 0929ef57dbbaf4ab2b7be06ea7210520, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
     mixerGroup: {fileID: -5333085382064497465, guid: d26a714650213c248a27da6a272e46b2, type: 2}
-  - name: BGM2
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Player_Hurt
+    clip: {fileID: 8300000, guid: ef7f82f06a9a74059ab68870d5d32c7b, type: 3}
+    volume: 1
+    pitch: 1
     loop: 1
     source: {fileID: 0}
-    mixerGroup: {fileID: -5333085382064497465, guid: d26a714650213c248a27da6a272e46b2, type: 2}
-  - name: Hurt
-    clip: {fileID: 0}
-    volume: 0
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Heavy_Punch
+    clip: {fileID: 8300000, guid: 685c154ca27b04b25b4b84506a8e8ce5, type: 3}
+    volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}
     mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
+  - name: Motor
+    clip: {fileID: 8300000, guid: d7156715d4a2042de9197848405a53de, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 1
+    source: {fileID: 0}
+    mixerGroup: {fileID: 0}
+  - name: Fish_Hurt
+    clip: {fileID: 8300000, guid: 940e5d8311f4649c6a5ebd29145489bf, type: 3}
+    volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}
-    mixerGroup: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Waves
+    clip: {fileID: 8300000, guid: 75b44e2480e0f4be6aa1dcfbf03989ad, type: 3}
+    volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}
-    mixerGroup: {fileID: 0}
+    mixerGroup: {fileID: -5333085382064497465, guid: d26a714650213c248a27da6a272e46b2, type: 2}
   - name: 
     clip: {fileID: 0}
     volume: 0
