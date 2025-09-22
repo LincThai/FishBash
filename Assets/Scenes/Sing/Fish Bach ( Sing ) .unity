@@ -131,30 +131,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    - target: {fileID: 5604949610104969641, guid: 2aa7d8a46205e3d42888b5225fea2158, type: 3}
-      propertyPath: sounds.Array.data[1].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: ef7f82f06a9a74059ab68870d5d32c7b, type: 3}
-    - target: {fileID: 5604949610104969641, guid: 2aa7d8a46205e3d42888b5225fea2158, type: 3}
-      propertyPath: sounds.Array.data[1].name
-      value: Damage (Player)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5604949610104969641, guid: 2aa7d8a46205e3d42888b5225fea2158, type: 3}
-      propertyPath: sounds.Array.data[2].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 685c154ca27b04b25b4b84506a8e8ce5, type: 3}
-    - target: {fileID: 5604949610104969641, guid: 2aa7d8a46205e3d42888b5225fea2158, type: 3}
-      propertyPath: sounds.Array.data[2].name
-      value: Heavy Punch
-      objectReference: {fileID: 0}
-    - target: {fileID: 5604949610104969641, guid: 2aa7d8a46205e3d42888b5225fea2158, type: 3}
-      propertyPath: sounds.Array.data[1].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5604949610104969641, guid: 2aa7d8a46205e3d42888b5225fea2158, type: 3}
-      propertyPath: sounds.Array.data[1].volume
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9202383530556204816, guid: 2aa7d8a46205e3d42888b5225fea2158, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.922917
