@@ -18,7 +18,7 @@ public class Floater : MonoBehaviour
         // add a gravitational force to the 4 floater points and divide that force by the number of floaters
         rigidBody.AddForceAtPosition(Physics.gravity / floaterCount, transform.position, ForceMode.Acceleration);
         // get the wave height
-        float waveHeight = WaveManager.instance.GetWaveHeight(transform.position.x);
+        float waveHeight = WaveManager.instance.GetWaveHeight(transform.position.x, transform.position.z);
         // check when underwater if floater y is less than the height of the wave means we need to apply a buoyancy force
         if (transform.position.y < waveHeight)
         {

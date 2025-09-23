@@ -19,12 +19,6 @@ public class RadioDialogue : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void StartDialogue(DialogueQuest dialogue)
     {
         // clears the queue
