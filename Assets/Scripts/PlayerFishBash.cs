@@ -25,6 +25,10 @@ public class PlayerFishBash : MonoBehaviour
     public FishingAreaTrigger fishAreaTrigger;
     public TMP_Text resultsText;
     public GameObject results;
+    public Animator animatorLeftFist;
+    public Animator animatorRightFist;
+    public Animator animatorBlockArms;
+    public GameObject gaurdArms;
 
     // inputs
     private InputAction guardAction;
