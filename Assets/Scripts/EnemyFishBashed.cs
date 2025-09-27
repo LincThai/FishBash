@@ -27,6 +27,7 @@ public class EnemyFishBashed : MonoBehaviour
     public HealthBar enemyHealthBar;
     public PlayerFishBash playerToBash;
     public FishingAreaTrigger fishingAreaTrigger;
+    public Animator fishAnimator;
 
     private Fish currentFish;
 
@@ -40,6 +41,8 @@ public class EnemyFishBashed : MonoBehaviour
         // Assigning UI element Info
         fishTag.text = currentFish.fishName;
         enemySprite.sprite = currentFish.fishSprite;
+        // animations
+        
         // Assign Enemy Data
         enemyMaxHealth = currentFish.MaxHealth;
         enemyDamage = currentFish.damage;

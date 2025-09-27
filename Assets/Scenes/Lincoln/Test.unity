@@ -970,6 +970,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3163325976994336742, guid: 66b253367f2a4e04fa548fc2498e0f53, type: 3}
+      propertyPath: dialogueQuests.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163325976994336742, guid: 66b253367f2a4e04fa548fc2498e0f53, type: 3}
+      propertyPath: 'dialogueQuests.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 388780da6d1b916488fb1e9269557edc, type: 2}
     - target: {fileID: 5603185779506233218, guid: 66b253367f2a4e04fa548fc2498e0f53, type: 3}
       propertyPath: m_Name
       value: GameManager
