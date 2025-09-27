@@ -11,7 +11,7 @@ public class FishingAreaTrigger : MonoBehaviour
     private InputAction interactAction;
 
     // popup reference
-    public GameObject popupControls;
+    public GameObject popupInteractInput;
     // minigame reference
     public GameObject fishBashUI;
 
@@ -31,7 +31,7 @@ public class FishingAreaTrigger : MonoBehaviour
             if (numOfFish > 0)
             {
                 // open a pop up to display the key to start fishing
-                popupControls.SetActive(true);
+                popupInteractInput.SetActive(true);
             }
         }
     }
@@ -48,7 +48,7 @@ public class FishingAreaTrigger : MonoBehaviour
                 {
                     // activate fishing mode.
                     fishBashUI.SetActive(true);
-                    popupControls.SetActive(false);
+                    popupInteractInput.SetActive(false);
                     OnFishingActionSFX();
                     // maybe call a function to update the number of fish
                 }
@@ -56,7 +56,7 @@ public class FishingAreaTrigger : MonoBehaviour
             else
             {
                 // turn off popup
-                popupControls.SetActive(false);
+                popupInteractInput.SetActive(false);
 
                 // when there is no more fish
                 Destroy(this);
@@ -74,7 +74,7 @@ public class FishingAreaTrigger : MonoBehaviour
             if (numOfFish <= 0)
             {
                 // turn off popup
-                popupControls.SetActive(false);
+                popupInteractInput.SetActive(false);
 
                 // when there is no more fish
                 Destroy(this);
@@ -82,7 +82,7 @@ public class FishingAreaTrigger : MonoBehaviour
             else 
             {
                 // turn off popup
-                popupControls.SetActive(false);
+                popupInteractInput.SetActive(false);
             }
         }
     }

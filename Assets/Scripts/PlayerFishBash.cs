@@ -29,6 +29,8 @@ public class PlayerFishBash : MonoBehaviour
     public Animator animatorRightFist;
     public Animator animatorBlockArms;
     public GameObject gaurdArms;
+    public Cooldown leftCooldown;
+    public Cooldown rightCooldown;
 
     // inputs
     private InputAction guardAction;
@@ -56,6 +58,12 @@ public class PlayerFishBash : MonoBehaviour
         playerHealthBar.SetMaxHealth(playerMaxLives);
         playerHealthBar.SetHealth(playerCurrentLives);
 
+        // set cooldown to zero
+        leftCooldown.SetFillAmount(0);
+        rightCooldown.SetFillAmount(0);
+        nextLeftPunch = 0;
+        nextRightPunch = 0;
+
         Debug.Log("player health = " + playerCurrentLives);
     }
 
@@ -72,21 +80,29 @@ public class PlayerFishBash : MonoBehaviour
         }
         else { isGuarding = false; }
 
+        // decrease the cooldown
+        nextLeftPunch -= Time.deltaTime;
+        nextRightPunch -= Time.deltaTime;
+
+        // apply to UI
+        leftCooldown.SetFillAmount(nextLeftPunch/playerAttackCooldown);
+        rightCooldown.SetFillAmount(nextRightPunch/playerAttackCooldown);
+
         if (!isGuarding)
         {
-            if (attackActionL.IsPressed() && Time.time >= nextLeftPunch)
+            if (attackActionL.IsPressed() && nextLeftPunch <= 0)
             {
                 // call the attack function passing in the left hand animation
                 PlayerAttack();
                 // add cooldown
-                nextLeftPunch = Time.time + playerAttackCooldown;
+                nextLeftPunch = playerAttackCooldown;
             }
-            if (attackActionR.IsPressed() && Time.time >= nextRightPunch)
+            if (attackActionR.IsPressed() && nextRightPunch <= 0)
             {
                 // call the attack function passing in the right hand animation
                 PlayerAttack();
                 // add cooldown
-                nextRightPunch = Time.time + playerAttackCooldown;
+                nextRightPunch = playerAttackCooldown;
             }
         }
     }
