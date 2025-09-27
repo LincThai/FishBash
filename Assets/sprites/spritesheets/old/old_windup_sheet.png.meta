@@ -121,12 +121,848 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: old_windup_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099749503d48ad749abc288cf53b118d
+      internalID: -1845399703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 14400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4db4357bd673e94dbd5162132b3007f
+      internalID: 1643325965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7feb5ca6722593149a5edc4ea615e1fd
+      internalID: 1574787195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 13600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4f577d46852fa41adde8e8e6f72a29
+      internalID: 863789400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28621aa63793d6439ef6e682be0c5d9
+      internalID: -1336855835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 12800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff74745041be0b488d34705baffa15f
+      internalID: 2046369072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53493d2b3c8f74946b1ae9d9bb8d9cc0
+      internalID: 856152695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 12000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c4e2e6818529846892bec267d35dd5
+      internalID: 1738322610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aadb72ac0b72814bbb8a482ce4244b0
+      internalID: -1996538579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 11200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e30f221850c164ebd99b4c3999d41d
+      internalID: 1446753596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229797d7a8e3a2c4098bad90d18a7d58
+      internalID: 578706557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 10400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6db4d87725541943ab63a96a9ed2ae2
+      internalID: 457413397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593ad22f8fc77e940b701d3b4b71eb05
+      internalID: -759205739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 9600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efcea814f89e33f4195acc5f0f425ec3
+      internalID: -1149416316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20866503790dc3843acd818495500506
+      internalID: 83047899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 8800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cfaf76482442204b90f408bc6aa6cc9
+      internalID: -1398393616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cae8cbd4d047f74e8bc5884eaa4d3b9
+      internalID: 37501609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 8000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a633301f90739144884c818ea47231c4
+      internalID: 185550833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0a8011113ac844d8208c03b2613d30
+      internalID: -892185193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 7200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8067c1d24e0454e46b4edde0c1f63f27
+      internalID: -891120194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17eb8c937dd57574f84fb94f38ce094c
+      internalID: 202472330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 6400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175dd71ce9051bc4d87a840db51233f8
+      internalID: -1809547111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9841dfea6e594ed4ab02334f94e51a1a
+      internalID: -1590448864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 5600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872a1717248ba6c41929331a2e711003
+      internalID: -1099701691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55e90266e6d0114bb3d7beab4d521fe
+      internalID: 638148867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 4800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bdb790d1ee3a7f40aebf6fadb15b83c
+      internalID: -1087785159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415652b040f8a17428feb796600c53fc
+      internalID: -819231332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 4000
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5c4f49de1383d46a6567e16203b30d
+      internalID: 591970310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a07c4cfde360344fa1b1cf5e95e9c4a
+      internalID: -1182703600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7dcf9913f33084eb93835276393cd4
+      internalID: 1967071755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333ce2640bd84dc45b554a0fa0544863
+      internalID: -336233988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a659d947f2166a64aae58d47befeb180
+      internalID: -595910516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6999876d45e905940aa199174ce28b28
+      internalID: -1451520322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1600
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450ae1e468b4fac469e0fb8a528a1164
+      internalID: 665293049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13128da7106cd7b40856f5ea8aefddf7
+      internalID: 19616884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8a0f84a7126c044b5ac351e1218ad0
+      internalID: -931902032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db92fcea1d623e4b9ea2f9327e89ab5
+      internalID: 1090190362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: old_windup_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a628fd76670784ca099afd14ba403c
+      internalID: -636982562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 53db3aea34c0f3f4598b526ced76eaad
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +971,45 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      old_windup_sheet_0: -1845399703
+      old_windup_sheet_1: 1643325965
+      old_windup_sheet_10: 578706557
+      old_windup_sheet_11: 457413397
+      old_windup_sheet_12: -759205739
+      old_windup_sheet_13: -1149416316
+      old_windup_sheet_14: 83047899
+      old_windup_sheet_15: -1398393616
+      old_windup_sheet_16: 37501609
+      old_windup_sheet_17: 185550833
+      old_windup_sheet_18: -892185193
+      old_windup_sheet_19: -891120194
+      old_windup_sheet_2: 1574787195
+      old_windup_sheet_20: 202472330
+      old_windup_sheet_21: -1809547111
+      old_windup_sheet_22: -1590448864
+      old_windup_sheet_23: -1099701691
+      old_windup_sheet_24: 638148867
+      old_windup_sheet_25: -1087785159
+      old_windup_sheet_26: -819231332
+      old_windup_sheet_27: 591970310
+      old_windup_sheet_28: -1182703600
+      old_windup_sheet_29: 1967071755
+      old_windup_sheet_3: 863789400
+      old_windup_sheet_30: -336233988
+      old_windup_sheet_31: -595910516
+      old_windup_sheet_32: -1451520322
+      old_windup_sheet_33: 665293049
+      old_windup_sheet_34: 19616884
+      old_windup_sheet_35: -931902032
+      old_windup_sheet_36: 1090190362
+      old_windup_sheet_37: -636982562
+      old_windup_sheet_4: -1336855835
+      old_windup_sheet_5: 2046369072
+      old_windup_sheet_6: 856152695
+      old_windup_sheet_7: 1738322610
+      old_windup_sheet_8: -1996538579
+      old_windup_sheet_9: 1446753596
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
