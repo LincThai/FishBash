@@ -47,9 +47,6 @@ public class PlayerFishBash : MonoBehaviour
 
     private void OnEnable()
     {
-        // connect to game manager
-        GameManager.instance._PlayerFishBash = this;
-
         // assign the fishing trigger
         fishAreaTrigger = GameManager.instance.currentFishArea;
 

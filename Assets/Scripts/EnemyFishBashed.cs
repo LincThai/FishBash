@@ -32,9 +32,6 @@ public class EnemyFishBashed : MonoBehaviour
 
     private void OnEnable()
     {
-        // connect to game manager
-        GameManager.instance._EnemyFishBashed = this;
-
         // assign fishing area trigger
         fishingAreaTrigger = GameManager.instance.currentFishArea;
 
