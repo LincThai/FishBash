@@ -115,6 +115,13 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
     mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Cooldown
+    clip: {fileID: 8300000, guid: 81a92cf1f25f441f0a73a1fd98bb32d3, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
   - name: Double_Punch
     clip: {fileID: 8300000, guid: 945bbfdbe15144f99a1e208fe789a800, type: 3}
     volume: 1
