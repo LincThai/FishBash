@@ -80,6 +80,9 @@ public class PlayerFishBash : MonoBehaviour
         // decrease the cooldown
         nextLeftPunch -= Time.deltaTime;
         nextRightPunch -= Time.deltaTime;
+        // play sound effect
+        if (nextLeftPunch < 0) { FindAnyObjectByType<AudioManager>().Play("Cooldown"); }
+        if (nextRightPunch < 0) { FindAnyObjectByType<AudioManager>().Play("Cooldown"); }
 
         // apply to UI
         leftCooldown.SetFillAmount(nextLeftPunch/playerAttackCooldown);
@@ -112,7 +115,7 @@ public class PlayerFishBash : MonoBehaviour
         // animate the attack
 
         // play the sound
-        FindObjectOfType<AudioManager>().Play("Punch");
+        FindObjectOfType<AudioManager>().Play("Heavy_Punch");
 
     }
 
@@ -128,7 +131,7 @@ public class PlayerFishBash : MonoBehaviour
             playerHealthBar.SetHealth(playerCurrentLives);
 
             // play damage sound and animation
-            FindObjectOfType<AudioManager>().Play("Hurt");
+            FindObjectOfType<AudioManager>().Play("Player_Hurt");
         
             // check if player has less than or 0 lives/health
             if (playerCurrentLives <= 0)

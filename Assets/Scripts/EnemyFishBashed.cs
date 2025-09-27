@@ -89,6 +89,9 @@ public class EnemyFishBashed : MonoBehaviour
     {
         // start windup animation
 
+        // play charge sound effect
+        FindAnyObjectByType<AudioManager>().Play("Charge_Up");
+
         // wait for attack charge
         yield return new WaitForSeconds(enemyChargeTime);
 
@@ -98,7 +101,7 @@ public class EnemyFishBashed : MonoBehaviour
         // animate the attack
 
         // play the sound
-        FindObjectOfType<AudioManager>().Play("HeavyPunch");
+        FindObjectOfType<AudioManager>().Play("Enemy_Attack");
 
         // change to the cooldown state
         state = 2;
@@ -114,7 +117,7 @@ public class EnemyFishBashed : MonoBehaviour
         enemyHealthBar.SetHealth(enemyCurrentHealth);
 
         // play enemy damaged sound and animation
-        FindObjectOfType<AudioManager>().Play("Hurt");
+        FindObjectOfType<AudioManager>().Play("Fish_Hurt");
 
         if (enemyCurrentHealth <= 0)
         {
