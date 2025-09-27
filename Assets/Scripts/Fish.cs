@@ -10,6 +10,7 @@ public class Fish : ScriptableObject
     public string description;
     // UI/Animation
     public Sprite fishSprite;
+    public AnimationClip[] animationClips;
     // Combat Data
     public int MaxHealth = 3;
     public int damage = 1;
