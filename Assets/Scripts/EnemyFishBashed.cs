@@ -90,10 +90,13 @@ public class EnemyFishBashed : MonoBehaviour
         // start windup animation
 
         // play charge sound effect
-        FindAnyObjectByType<AudioManager>().Play("Charge_Up");
+        FindObjectOfType<AudioManager>().Play("Charge_Up");
 
         // wait for attack charge
         yield return new WaitForSeconds(enemyChargeTime);
+
+        // play ping sound effect
+        
 
         // apply damage to player using the player's take damage function
         playerToBash.PlayerTakeDamage(enemyDamage);

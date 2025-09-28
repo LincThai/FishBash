@@ -81,8 +81,8 @@ public class PlayerFishBash : MonoBehaviour
         nextLeftPunch -= Time.deltaTime;
         nextRightPunch -= Time.deltaTime;
         // play sound effect
-        if (nextLeftPunch < 0) { FindAnyObjectByType<AudioManager>().Play("Cooldown"); }
-        if (nextRightPunch < 0) { FindAnyObjectByType<AudioManager>().Play("Cooldown"); }
+        if (nextLeftPunch < 0) { FindObjectOfType<AudioManager>().Play("Cooldown"); }
+        if (nextRightPunch < 0) { FindObjectOfType<AudioManager>().Play("Cooldown"); }
 
         // apply to UI
         leftCooldown.SetFillAmount(nextLeftPunch/playerAttackCooldown);
