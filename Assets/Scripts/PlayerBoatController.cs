@@ -13,7 +13,6 @@ namespace Player
 
         // references
         public Rigidbody body;
-        //public InputActionAsset inputActions;
 
         // inputs
         private InputAction moveAction;
