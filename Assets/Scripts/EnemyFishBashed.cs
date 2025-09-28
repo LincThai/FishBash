@@ -42,7 +42,7 @@ public class EnemyFishBashed : MonoBehaviour
         fishTag.text = currentFish.fishName;
         enemySprite.sprite = currentFish.fishSprite;
         // animations
-        
+        fishAnimator.runtimeAnimatorController = currentFish.animationOverrideController;
         // Assign Enemy Data
         enemyMaxHealth = currentFish.MaxHealth;
         enemyDamage = currentFish.damage;
