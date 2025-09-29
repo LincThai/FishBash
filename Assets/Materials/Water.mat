@@ -113,13 +113,14 @@ Material:
     - _Foam_Colour_Strength: 0.96
     - _Foam_Count: 1
     - _Foam_Cutoff: 1
-    - _Foam_Speed: 1
-    - _Foam_Texture_Scale: 100
+    - _Foam_Speed: 1.15
+    - _Foam_Texture_Scale: 144.7
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
     - _OcclusionStrength: 1
+    - _Opacity: 1
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -132,21 +133,22 @@ Material:
     - _Surface: 0
     - _Water_Colour_Strength: 1
     - _Water_Depth: 5
-    - _Water_Normal_Strength: 0.5
-    - _Water_Refraction_Scale: 0.6
-    - _Water_Refraction_Speed: 0.6
+    - _Water_Normal_Strength: 0.77
+    - _Water_Refraction_Scale: 3.15
+    - _Water_Refraction_Speed: 0.19
     - _Water_Texture_Scale: 0.51
-    - _Wave_Frequency: 2.21
-    - _Wave_Height: 0.09
+    - _Wave_Frequency: 136.72
+    - _Wave_Height: 0.00132
     - _Wave_Offset: 0
-    - _Wave_Speed: 0.7
+    - _Wave_Speed: 1.12
+    - _Wave_Vertical_Offset: 0.0079
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Foam_Colour: {r: 0.5613652, g: 0.8085958, b: 0.8207547, a: 1}
+    - _Foam_Colour: {r: 0.9485137, g: 0.98865455, b: 0.990566, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Water_Depth_Colour: {r: 0.22907397, g: 0.15330186, b: 0.5, a: 0.5019608}
     - _Water_Shallow_Colour: {r: 0.45429862, g: 0.6769117, b: 0.7830188, a: 0.2509804}
