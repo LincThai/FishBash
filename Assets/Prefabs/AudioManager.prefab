@@ -100,14 +100,14 @@ MonoBehaviour:
     pitch: 0
     loop: 0
     source: {fileID: 0}
-    mixerGroup: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
   - name: Charge_Up
     clip: {fileID: 8300000, guid: 5f0631d5c8e194e9982eb4ab3166d197, type: 3}
     volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}
-    mixerGroup: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
   - name: Punch_Miss
     clip: {fileID: 8300000, guid: ffff2f50a9e334d89a7dabff91b89662, type: 3}
     volume: 1
