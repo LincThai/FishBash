@@ -27,14 +27,12 @@ public class EnemyFishBashed : MonoBehaviour
     public HealthBar enemyHealthBar;
     public PlayerFishBash playerToBash;
     public FishingAreaTrigger fishingAreaTrigger;
+    public Animator fishAnimator;
 
     private Fish currentFish;
 
     private void OnEnable()
     {
-        // connect to game manager
-        GameManager.instance._EnemyFishBashed = this;
-
         // assign fishing area trigger
         fishingAreaTrigger = GameManager.instance.currentFishArea;
 
@@ -43,6 +41,8 @@ public class EnemyFishBashed : MonoBehaviour
         // Assigning UI element Info
         fishTag.text = currentFish.fishName;
         enemySprite.sprite = currentFish.fishSprite;
+        // animations
+        fishAnimator.runtimeAnimatorController = currentFish.animationOverrideController;
         // Assign Enemy Data
         enemyMaxHealth = currentFish.MaxHealth;
         enemyDamage = currentFish.damage;
@@ -89,8 +89,14 @@ public class EnemyFishBashed : MonoBehaviour
     {
         // start windup animation
 
+        // play charge sound effect
+        FindObjectOfType<AudioManager>().Play("Charge_Up");
+
         // wait for attack charge
         yield return new WaitForSeconds(enemyChargeTime);
+
+        // play ping sound effect
+        
 
         // apply damage to player using the player's take damage function
         playerToBash.PlayerTakeDamage(enemyDamage);
@@ -98,7 +104,7 @@ public class EnemyFishBashed : MonoBehaviour
         // animate the attack
 
         // play the sound
-        FindObjectOfType<AudioManager>().Play("HeavyPunch");
+        FindObjectOfType<AudioManager>().Play("Enemy_Attack");
 
         // change to the cooldown state
         state = 2;
@@ -114,7 +120,7 @@ public class EnemyFishBashed : MonoBehaviour
         enemyHealthBar.SetHealth(enemyCurrentHealth);
 
         // play enemy damaged sound and animation
-        FindObjectOfType<AudioManager>().Play("Hurt");
+        FindObjectOfType<AudioManager>().Play("Fish_Hurt");
 
         if (enemyCurrentHealth <= 0)
         {

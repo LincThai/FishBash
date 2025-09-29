@@ -7,12 +7,30 @@ using UnityEngine.UI;
 public class RadioDialogue : MonoBehaviour
 {
     // set variables
+    // singleton variable
+    public static RadioDialogue instance;
+    // text variable
     public Queue<string> sentences;
 
     // references
     public TMP_Text dialogueText;
     public GameObject textBox;
     public Image icon;
+    public Animator animator;
+
+    private void Awake()
+    {
+        // a singleton to make sure there is only one of these in the scene
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+    }
 
     private void Start()
     {
@@ -21,6 +39,9 @@ public class RadioDialogue : MonoBehaviour
 
     public void StartDialogue(DialogueQuest dialogue)
     {
+        // play open animation
+        animator.SetBool("isOpen", true);
+
         // clears the queue
         sentences.Clear();
 
@@ -65,6 +86,8 @@ public class RadioDialogue : MonoBehaviour
     public void EndDialogue()
     {
         Debug.Log("End Dialogue");
+        // play close animation
+        animator.SetBool("isOpen", true);
     }
 
 }

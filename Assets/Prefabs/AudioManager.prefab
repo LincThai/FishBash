@@ -87,11 +87,46 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
     mixerGroup: {fileID: -5333085382064497465, guid: d26a714650213c248a27da6a272e46b2, type: 2}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
+  - name: Ping
+    clip: {fileID: 8300000, guid: adbe46a044c974b009cef20705ca3649, type: 3}
+    volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}
-    mixerGroup: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Block
+    clip: {fileID: 8300000, guid: cf18e6843ac0c48188cf82e71d31f7a8, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Charge_Up
+    clip: {fileID: 8300000, guid: 5f0631d5c8e194e9982eb4ab3166d197, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Punch_Miss
+    clip: {fileID: 8300000, guid: ffff2f50a9e334d89a7dabff91b89662, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Cooldown
+    clip: {fileID: 8300000, guid: 81a92cf1f25f441f0a73a1fd98bb32d3, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Double_Punch
+    clip: {fileID: 8300000, guid: 945bbfdbe15144f99a1e208fe789a800, type: 3}
+    volume: 1
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
   mainMixer: {fileID: 24100000, guid: d26a714650213c248a27da6a272e46b2, type: 2}

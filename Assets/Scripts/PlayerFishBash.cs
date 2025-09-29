@@ -25,6 +25,12 @@ public class PlayerFishBash : MonoBehaviour
     public FishingAreaTrigger fishAreaTrigger;
     public TMP_Text resultsText;
     public GameObject results;
+    public Animator animatorLeftFist;
+    public Animator animatorRightFist;
+    public Animator animatorBlockArms;
+    public GameObject gaurdArms;
+    public Cooldown leftCooldown;
+    public Cooldown rightCooldown;
 
     // inputs
     private InputAction guardAction;
@@ -41,9 +47,6 @@ public class PlayerFishBash : MonoBehaviour
 
     private void OnEnable()
     {
-        // connect to game manager
-        GameManager.instance._PlayerFishBash = this;
-
         // assign the fishing trigger
         fishAreaTrigger = GameManager.instance.currentFishArea;
 
@@ -51,6 +54,12 @@ public class PlayerFishBash : MonoBehaviour
         playerCurrentLives = playerMaxLives;
         playerHealthBar.SetMaxHealth(playerMaxLives);
         playerHealthBar.SetHealth(playerCurrentLives);
+
+        // set cooldown to zero
+        leftCooldown.SetFillAmount(0);
+        rightCooldown.SetFillAmount(0);
+        nextLeftPunch = 0;
+        nextRightPunch = 0;
 
         Debug.Log("player health = " + playerCurrentLives);
     }
@@ -68,21 +77,32 @@ public class PlayerFishBash : MonoBehaviour
         }
         else { isGuarding = false; }
 
+        // decrease the cooldown
+        nextLeftPunch -= Time.deltaTime;
+        nextRightPunch -= Time.deltaTime;
+        // play sound effect
+        if (nextLeftPunch < 0) { FindObjectOfType<AudioManager>().Play("Cooldown"); }
+        if (nextRightPunch < 0) { FindObjectOfType<AudioManager>().Play("Cooldown"); }
+
+        // apply to UI
+        leftCooldown.SetFillAmount(nextLeftPunch/playerAttackCooldown);
+        rightCooldown.SetFillAmount(nextRightPunch/playerAttackCooldown);
+
         if (!isGuarding)
         {
-            if (attackActionL.IsPressed() && Time.time >= nextLeftPunch)
+            if (attackActionL.IsPressed() && nextLeftPunch <= 0)
             {
                 // call the attack function passing in the left hand animation
                 PlayerAttack();
                 // add cooldown
-                nextLeftPunch = Time.time + playerAttackCooldown;
+                nextLeftPunch = playerAttackCooldown;
             }
-            if (attackActionR.IsPressed() && Time.time >= nextRightPunch)
+            if (attackActionR.IsPressed() && nextRightPunch <= 0)
             {
                 // call the attack function passing in the right hand animation
                 PlayerAttack();
                 // add cooldown
-                nextRightPunch = Time.time + playerAttackCooldown;
+                nextRightPunch = playerAttackCooldown;
             }
         }
     }
@@ -95,7 +115,7 @@ public class PlayerFishBash : MonoBehaviour
         // animate the attack
 
         // play the sound
-        FindObjectOfType<AudioManager>().Play("Punch");
+        FindObjectOfType<AudioManager>().Play("Heavy_Punch");
 
     }
 
@@ -111,7 +131,7 @@ public class PlayerFishBash : MonoBehaviour
             playerHealthBar.SetHealth(playerCurrentLives);
 
             // play damage sound and animation
-            FindObjectOfType<AudioManager>().Play("Hurt");
+            FindObjectOfType<AudioManager>().Play("Player_Hurt");
         
             // check if player has less than or 0 lives/health
             if (playerCurrentLives <= 0)
