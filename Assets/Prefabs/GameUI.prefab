@@ -2468,6 +2468,7 @@ GameObject:
   - component: {fileID: 5362479145463371378}
   - component: {fileID: 7937593416045819970}
   - component: {fileID: 1029882181896625310}
+  - component: {fileID: 4342033007574190447}
   m_Layer: 5
   m_Name: RightFist
   m_TagString: Untagged
@@ -2532,6 +2533,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &4342033007574190447
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6640228275174260240}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e2bf21d735ab7f48b8d2365b1e026ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6771629121679478630
 GameObject:
   m_ObjectHideFlags: 0
