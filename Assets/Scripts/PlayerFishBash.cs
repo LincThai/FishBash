@@ -61,7 +61,7 @@ public class PlayerFishBash : MonoBehaviour
         nextLeftPunch = 0;
         nextRightPunch = 0;
 
-        Debug.Log("player health = " + playerCurrentLives);
+        Debug.Log("Player health = " + playerCurrentLives);
     }
 
     // Update is called once per frame
@@ -109,6 +109,7 @@ public class PlayerFishBash : MonoBehaviour
                 animatorRightFist.SetBool("Attack", false);
             }
         }
+        Debug.Log("Player Health: " + playerCurrentLives);
     }
 
     public void PlayerAttack(Animator attackAnimator)
