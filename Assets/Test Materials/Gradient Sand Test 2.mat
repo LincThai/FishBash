@@ -113,9 +113,9 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Gradient_Blend: 2
-    - _Gradient_Offset: 0
-    - _Intensity: 10.74
+    - _Gradient_Blend: 16.35
+    - _Gradient_Offset: 18.4
+    - _Intensity: 3.46
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
