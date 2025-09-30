@@ -87,7 +87,7 @@ public class RadioDialogue : MonoBehaviour
     {
         Debug.Log("End Dialogue");
         // play close animation
-        animator.SetBool("isOpen", true);
+        animator.SetBool("isOpen", false);
     }
 
 }

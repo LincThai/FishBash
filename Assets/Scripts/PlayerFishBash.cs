@@ -92,27 +92,32 @@ public class PlayerFishBash : MonoBehaviour
         {
             if (attackActionL.IsPressed() && nextLeftPunch <= 0)
             {
-                // call the attack function passing in the left hand animation
-                PlayerAttack();
+                // call the attack function passing in the left hand animator
+                PlayerAttack(animatorLeftFist);
                 // add cooldown
                 nextLeftPunch = playerAttackCooldown;
+                // reset the animator parameter to false
+                animatorLeftFist.SetBool("Attack", false);
             }
             if (attackActionR.IsPressed() && nextRightPunch <= 0)
             {
-                // call the attack function passing in the right hand animation
-                PlayerAttack();
+                // call the attack function passing in the right hand animator
+                PlayerAttack(animatorRightFist);
                 // add cooldown
                 nextRightPunch = playerAttackCooldown;
+                // reset the animator parameter to false
+                animatorRightFist.SetBool("Attack", false);
             }
         }
     }
 
-    public void PlayerAttack()
+    public void PlayerAttack(Animator attackAnimator)
     {
         // apply damage to enemy using the enemy's take damage function
         enemyToBash.EnemyTakeDamage(playerDamage);
 
         // animate the attack
+        attackAnimator.SetBool("Attack", true);
 
         // play the sound
         FindObjectOfType<AudioManager>().Play("Heavy_Punch");
