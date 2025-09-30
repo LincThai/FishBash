@@ -101,7 +101,7 @@ public class EnemyFishBashed : MonoBehaviour
         // stop charge animation
         fishAnimator.SetBool("Charging", false);
         // play ping sound effect
-
+        FindObjectOfType<AudioManager>().Play("Ping");
 
         // apply damage to player using the player's take damage function
         playerToBash.PlayerTakeDamage(enemyDamage);

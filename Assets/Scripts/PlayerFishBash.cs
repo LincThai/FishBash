@@ -145,6 +145,7 @@ public class PlayerFishBash : MonoBehaviour
                 StartCoroutine(PlayerDeath());
             }
         }
+        else {return; }
     }
 
     public IEnumerator PlayerDeath()
