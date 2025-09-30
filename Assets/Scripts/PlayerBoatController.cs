@@ -19,6 +19,9 @@ namespace Player
 
         private Vector2 moveAmount;
 
+        // audio
+        private bool isPlaying = false;
+
         private void Awake()
         {
             // subscribe to the input in your input actions asset
@@ -27,6 +30,7 @@ namespace Player
 
         private void Start()
         {
+            // lock the cursor to the center of the screen
             Cursor.lockState = CursorLockMode.Locked;
         }
 
@@ -45,12 +49,28 @@ namespace Player
             // adds a torque for rotation
             body.AddRelativeTorque(Vector3.up * horizontalInput * playerRotSpeed);
 
-            // play audio
-            FindObjectOfType<AudioManager>().Play("Motor");
+            if (verticalInput > 0 || horizontalInput > 0)
+            {
+                OnBoatMoveSFX();
 
-            //float volume = body.linearVelocity.magnitude / 30;
-            //body.linearVelocity.magnitude
+                //float volume = body.linearVelocity.magnitude / 30;
+                //body.linearVelocity.magnitude
+            }
         }
 
+        public void OnBoatMoveSFX()
+        {
+            if (!isPlaying)
+            {
+                // play audio
+                FindObjectOfType<AudioManager>().Play("Motor");
+
+                isPlaying = true;
+            }
+            else
+            {
+                FindObjectOfType<AudioManager>().Stop("Motor");
+            }
+        }
     }
 }
