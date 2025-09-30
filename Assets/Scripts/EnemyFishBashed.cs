@@ -41,8 +41,6 @@ public class EnemyFishBashed : MonoBehaviour
         // Assigning UI element Info
         fishTag.text = currentFish.fishName;
         enemySprite.sprite = currentFish.fishSprite;
-        // animations
-        fishAnimator.runtimeAnimatorController = currentFish.animationOverrideController;
         // Assign Enemy Data
         enemyMaxHealth = currentFish.MaxHealth;
         enemyDamage = currentFish.damage;
@@ -59,6 +57,16 @@ public class EnemyFishBashed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // animations
+        bool animatorSet = false;
+
+        if(!animatorSet)
+        {
+            fishAnimator.runtimeAnimatorController = currentFish.animationOverrideController;
+            animatorSet = true;
+
+        }
+
         // state check to check in which the enemy is in
         if (state == 0)
         {
@@ -69,8 +77,9 @@ public class EnemyFishBashed : MonoBehaviour
         }
         else if (state == 1)
         {
-
-        }else if (state == 2)
+            Debug.Log("TAKE THIS !!!!!!!!!!!!!");
+        } 
+        else if (state == 2)
         {
             // start the coroutine of the cooldown between the enemies attacks
             StartCoroutine(Delay(Random.Range(enemyAttackCooldownMin, enemyAttackCooldownMax)));
@@ -83,8 +92,11 @@ public class EnemyFishBashed : MonoBehaviour
         fishAnimator.SetBool("Attacking", false);
         // wait for a random amount of time
         yield return new WaitForSeconds(randTime);
+
+        Debug.Log("Delay = " + randTime);
         // change to the ready state
         state = 0;
+        Debug.Log("State =" + state);
     }
 
     public IEnumerator EnemyAttack()
@@ -97,6 +109,8 @@ public class EnemyFishBashed : MonoBehaviour
 
         // wait for attack charge
         yield return new WaitForSeconds(enemyChargeTime);
+
+        Debug.Log("Enemy Charge Time = " + enemyChargeTime);
 
         // stop charge animation
         fishAnimator.SetBool("Charging", false);

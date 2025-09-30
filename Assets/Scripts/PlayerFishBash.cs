@@ -132,6 +132,8 @@ public class PlayerFishBash : MonoBehaviour
             // reduce life/health
             playerCurrentLives -= damageTaken;
 
+            Debug.Log("Damage Taken: " + damageTaken);
+
             // update in UI
             playerHealthBar.SetHealth(playerCurrentLives);
 
