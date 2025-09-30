@@ -107,7 +107,7 @@ public class EnemyFishBashed : MonoBehaviour
         playerToBash.PlayerTakeDamage(enemyDamage);
 
         // animate the attack
-        fishAnimator.SetBool("Atacking", true);
+        fishAnimator.SetBool("Attacking", true);
 
         // play the sound
         FindObjectOfType<AudioManager>().Play("Enemy_Attack");
