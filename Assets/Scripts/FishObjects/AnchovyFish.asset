@@ -21,4 +21,4 @@ MonoBehaviour:
   damage: 1
   attackMaxCooldown: 3
   attackMinCooldown: 1
-  attackChargeTime: 2
+  attackChargeTime: 1
