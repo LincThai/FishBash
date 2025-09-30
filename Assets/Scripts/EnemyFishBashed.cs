@@ -79,6 +79,8 @@ public class EnemyFishBashed : MonoBehaviour
 
     IEnumerator Delay(float randTime)
     {
+        // stop attack animation
+        fishAnimator.SetBool("Attacking", false);
         // wait for a random amount of time
         yield return new WaitForSeconds(randTime);
         // change to the ready state
@@ -88,6 +90,7 @@ public class EnemyFishBashed : MonoBehaviour
     public IEnumerator EnemyAttack()
     {
         // start windup animation
+        fishAnimator.SetBool("Charging", true);
 
         // play charge sound effect
         FindObjectOfType<AudioManager>().Play("Charge_Up");
@@ -95,13 +98,16 @@ public class EnemyFishBashed : MonoBehaviour
         // wait for attack charge
         yield return new WaitForSeconds(enemyChargeTime);
 
+        // stop charge animation
+        fishAnimator.SetBool("Charging", false);
         // play ping sound effect
-        
+
 
         // apply damage to player using the player's take damage function
         playerToBash.PlayerTakeDamage(enemyDamage);
 
         // animate the attack
+        fishAnimator.SetBool("Atacking", true);
 
         // play the sound
         FindObjectOfType<AudioManager>().Play("Enemy_Attack");

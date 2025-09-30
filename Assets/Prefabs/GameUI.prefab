@@ -2189,10 +2189,10 @@ MonoBehaviour:
   fishAreaTrigger: {fileID: 0}
   resultsText: {fileID: 8135077620319652591}
   results: {fileID: 5092537143688139284}
-  animatorLeftFist: {fileID: 0}
-  animatorRightFist: {fileID: 0}
-  animatorBlockArms: {fileID: 0}
-  gaurdArms: {fileID: 0}
+  animatorLeftFist: {fileID: 8665891350424036185}
+  animatorRightFist: {fileID: 4342033007574190447}
+  animatorBlockArms: {fileID: 4344095291602525809}
+  gaurdArms: {fileID: 4026368264535530730}
   leftCooldown: {fileID: 412580141833120807}
   rightCooldown: {fileID: 1881883657235364907}
 --- !u!1 &5092537143688139284
