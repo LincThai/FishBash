@@ -2694,7 +2694,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7853626402448411416
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3010,7 +3010,7 @@ MonoBehaviour:
   enemyHealthBar: {fileID: 2401296263312830329}
   playerToBash: {fileID: 4237057296738858821}
   fishingAreaTrigger: {fileID: 0}
-  fishAnimator: {fileID: 0}
+  fishAnimator: {fileID: 431002292030552597}
 --- !u!1 &7242188472080460892
 GameObject:
   m_ObjectHideFlags: 0

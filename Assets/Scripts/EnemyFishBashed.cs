@@ -15,7 +15,7 @@ public class EnemyFishBashed : MonoBehaviour
     public float enemyAttackCooldownMin;
     public float enemyChargeTime;
     // states
-    int state = 0; //0 = ready, 1 = attack, 2 = cooldown
+    int state = 2; //0 = ready, 1 = attack, 2 = cooldown
 
     // references
     [Header("References")]
