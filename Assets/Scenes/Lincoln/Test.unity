@@ -657,6 +657,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 5604949610104969641, guid: 2aa7d8a46205e3d42888b5225fea2158, type: 3}
+      propertyPath: sounds.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5604949610104969641, guid: 2aa7d8a46205e3d42888b5225fea2158, type: 3}
+      propertyPath: sounds.Array.data[11].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 41f9290b71ca14803bf19913b354315b, type: 3}
+    - target: {fileID: 5604949610104969641, guid: 2aa7d8a46205e3d42888b5225fea2158, type: 3}
+      propertyPath: sounds.Array.data[11].name
+      value: Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 5604949610104969641, guid: 2aa7d8a46205e3d42888b5225fea2158, type: 3}
+      propertyPath: sounds.Array.data[11].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5604949610104969641, guid: 2aa7d8a46205e3d42888b5225fea2158, type: 3}
+      propertyPath: sounds.Array.data[11].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5604949610104969641, guid: 2aa7d8a46205e3d42888b5225fea2158, type: 3}
+      propertyPath: sounds.Array.data[11].mixerGroup
+      value: 
+      objectReference: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
     - target: {fileID: 9202383530556204816, guid: 2aa7d8a46205e3d42888b5225fea2158, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -970,14 +994,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3163325976994336742, guid: 66b253367f2a4e04fa548fc2498e0f53, type: 3}
-      propertyPath: dialogueQuests.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3163325976994336742, guid: 66b253367f2a4e04fa548fc2498e0f53, type: 3}
-      propertyPath: 'dialogueQuests.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 388780da6d1b916488fb1e9269557edc, type: 2}
     - target: {fileID: 5603185779506233218, guid: 66b253367f2a4e04fa548fc2498e0f53, type: 3}
       propertyPath: m_Name
       value: GameManager
