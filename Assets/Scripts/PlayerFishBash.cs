@@ -109,7 +109,7 @@ public class PlayerFishBash : MonoBehaviour
                 animatorRightFist.SetBool("Attack", false);
             }
         }
-        Debug.Log("Player Health: " + playerCurrentLives);
+        //Debug.Log("Player Health: " + playerCurrentLives);
     }
 
     public void PlayerAttack(Animator attackAnimator)
@@ -140,7 +140,7 @@ public class PlayerFishBash : MonoBehaviour
 
             // play damage sound and animation
             FindObjectOfType<AudioManager>().Play("Player_Hurt");
-        
+
             // check if player has less than or 0 lives/health
             if (playerCurrentLives <= 0)
             {
@@ -161,6 +161,9 @@ public class PlayerFishBash : MonoBehaviour
         // show lose screen
         results.SetActive(true);
         resultsText.text = "KO You Lose";
+
+        // stop enemy from attacking
+        enemyToBash.fightEnd = true;
 
         // wait till deactivate
         yield return new WaitForSeconds(3);

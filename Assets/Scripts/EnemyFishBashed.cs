@@ -14,8 +14,9 @@ public class EnemyFishBashed : MonoBehaviour
     public float enemyAttackCooldownMax;
     public float enemyAttackCooldownMin;
     public float enemyChargeTime;
+    public bool fightEnd = false;
     // states
-    int state = 2; //0 = ready, 1 = attack, 2 = cooldown
+    int state = 2; //0 = ready, 1 = attack, 2 = cooldown are Primary states. 3 = End
 
     // references
     [Header("References")]
@@ -52,6 +53,9 @@ public class EnemyFishBashed : MonoBehaviour
         enemyCurrentHealth = enemyMaxHealth;
         enemyHealthBar.SetMaxHealth(enemyMaxHealth);
         enemyHealthBar.SetHealth(enemyCurrentHealth);
+
+        // fightEnd variable reset
+        fightEnd = false;
     }
 
     // Update is called once per frame
@@ -64,7 +68,12 @@ public class EnemyFishBashed : MonoBehaviour
         {
             fishAnimator.runtimeAnimatorController = currentFish.animationOverrideController;
             animatorSet = true;
+        }
 
+        // set to end state when game ends
+        if (fightEnd)
+        {
+            state = 3;
         }
 
         // state check to check in which state the enemy is in
@@ -74,16 +83,18 @@ public class EnemyFishBashed : MonoBehaviour
             StartCoroutine(EnemyAttack());
             // change to the attack state
             state = 1;
+            Debug.Log("State =" + state);
         }
         else if (state == 1)
         {
-            Debug.Log("TAKE THIS !!!!!!!!!!!!!");
-        } 
+            //Debug.Log("TAKE THIS !!!!!!!!!!!!!");
+        }
         else if (state == 2)
         {
             // start the coroutine of the cooldown between the enemies attacks
             StartCoroutine(Delay(Random.Range(enemyAttackCooldownMin, enemyAttackCooldownMax)));
         }
+        else if (state == 3) { Debug.Log("State =" + state); return; } 
     }
 
     IEnumerator Delay(float randTime)
@@ -93,7 +104,7 @@ public class EnemyFishBashed : MonoBehaviour
         // wait for a random amount of time
         yield return new WaitForSeconds(randTime);
 
-        Debug.Log("Delay = " + randTime);
+        //Debug.Log("Delay = " + randTime);
         // change to the ready state
         state = 0;
         Debug.Log("State =" + state);
@@ -110,7 +121,7 @@ public class EnemyFishBashed : MonoBehaviour
         // wait for attack charge
         yield return new WaitForSeconds(enemyChargeTime);
 
-        Debug.Log("Enemy Charge Time = " + enemyChargeTime);
+        //Debug.Log("Enemy Charge Time = " + enemyChargeTime);
 
         // stop charge animation
         fishAnimator.SetBool("Charging", false);
@@ -128,13 +139,14 @@ public class EnemyFishBashed : MonoBehaviour
 
         // change to the cooldown state
         state = 2;
+        Debug.Log("State =" + state);
     }
 
     public void EnemyTakeDamage(int damage)
     {
         // reduces enemies health
         enemyCurrentHealth -= damage;
-        Debug.Log("Enemy Health = " + enemyCurrentHealth);
+        //Debug.Log("Enemy Health = " + enemyCurrentHealth);
 
         // update the UI
         enemyHealthBar.SetHealth(enemyCurrentHealth);
@@ -160,6 +172,9 @@ public class EnemyFishBashed : MonoBehaviour
         results.SetActive(true);
         resultsText.text = "KO You Win";
 
+        // stop enemy attacks
+        fightEnd = true;
+
         // wait till deactivate
         yield return new WaitForSeconds(3);
 
@@ -167,5 +182,4 @@ public class EnemyFishBashed : MonoBehaviour
         results.SetActive(false);
         fishBashUI.SetActive(false);
     }
-
 }
