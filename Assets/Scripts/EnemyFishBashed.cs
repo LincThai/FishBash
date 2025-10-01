@@ -67,7 +67,7 @@ public class EnemyFishBashed : MonoBehaviour
 
         }
 
-        // state check to check in which the enemy is in
+        // state check to check in which state the enemy is in
         if (state == 0)
         {
             // start the coroutine of the charged attack
