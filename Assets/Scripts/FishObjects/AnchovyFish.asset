@@ -19,6 +19,6 @@ MonoBehaviour:
   animationOverrideController: {fileID: 22100000, guid: da8dab45292f07e4e93f4a2502be464c, type: 2}
   MaxHealth: 3
   damage: 1
-  attackMaxCooldown: 3
-  attackMinCooldown: 1
+  attackMaxCooldown: 5
+  attackMinCooldown: 3
   attackChargeTime: 1
