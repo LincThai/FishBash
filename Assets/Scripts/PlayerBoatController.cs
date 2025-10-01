@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,7 +21,7 @@ namespace Player
         private Vector2 moveAmount;
 
         // audio
-        private bool isPlaying = false;
+        private bool isPlaying;
 
         private void Awake()
         {
@@ -49,28 +50,29 @@ namespace Player
             // adds a torque for rotation
             body.AddRelativeTorque(Vector3.up * horizontalInput * playerRotSpeed);
 
-            if (verticalInput > 0 || horizontalInput > 0)
+            if (!isPlaying && moveAmount != Vector2.zero)
             {
-                OnBoatMoveSFX();
+                StartCoroutine(OnBoatMoveSFX());
 
                 //float volume = body.linearVelocity.magnitude / 30;
                 //body.linearVelocity.magnitude
             }
         }
 
-        public void OnBoatMoveSFX()
+        IEnumerator OnBoatMoveSFX()
         {
-            if (!isPlaying)
+            // change bool value
+            isPlaying = true;
+            while (body.linearVelocity.magnitude > 1f)
             {
                 // play audio
                 FindObjectOfType<AudioManager>().Play("Motor");
 
-                isPlaying = true;
+                yield return new WaitForSeconds(0.5f);
             }
-            else
-            {
-                FindObjectOfType<AudioManager>().Stop("Motor");
-            }
+            FindObjectOfType<AudioManager>().Stop("Motor");
+            // change bool value
+            isPlaying = false;
         }
     }
 }

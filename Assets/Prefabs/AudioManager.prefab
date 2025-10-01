@@ -70,7 +70,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: d7156715d4a2042de9197848405a53de, type: 3}
     volume: 1
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
     mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
   - name: Fish_Hurt
