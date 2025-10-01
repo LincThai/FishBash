@@ -53,13 +53,14 @@ public class FishingAreaTrigger : MonoBehaviour
                     // maybe call a function to update the number of fish
                 }
             }
-            else
+            else if (numOfFish <= 0)
             {
                 // turn off popup
                 popupInteractInput.SetActive(false);
 
                 // when there is no more fish
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                Debug.Log("Ran Out Of Fish");
             }
         }
     }
@@ -78,6 +79,7 @@ public class FishingAreaTrigger : MonoBehaviour
 
                 // when there is no more fish
                 Destroy(gameObject);
+                Debug.Log("No Fish");
             }
             else 
             {
