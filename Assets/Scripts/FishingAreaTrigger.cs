@@ -59,7 +59,7 @@ public class FishingAreaTrigger : MonoBehaviour
                 popupInteractInput.SetActive(false);
 
                 // when there is no more fish
-                Destroy(this);
+                Destroy(gameObject);
             }
         }
     }
@@ -77,7 +77,7 @@ public class FishingAreaTrigger : MonoBehaviour
                 popupInteractInput.SetActive(false);
 
                 // when there is no more fish
-                Destroy(this);
+                Destroy(gameObject);
             }
             else 
             {
