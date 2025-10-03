@@ -59,7 +59,7 @@ public class FishingAreaTrigger : MonoBehaviour
                 popupInteractInput.SetActive(false);
 
                 // when there is no more fish
-                //Destroy(gameObject);
+                Destroy(gameObject);
                 Debug.Log("Ran Out Of Fish");
             }
         }

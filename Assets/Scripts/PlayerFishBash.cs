@@ -11,7 +11,7 @@ public class PlayerFishBash : MonoBehaviour
     public int playerMaxLives = 3;
     public int playerCurrentLives;
     public int playerDamage = 1;
-    public float playerAttackCooldown = 2f;
+    public float playerAttackCooldown = 1f;
     public bool isGuarding = false;
 
     private float nextLeftPunch;
@@ -63,7 +63,7 @@ public class PlayerFishBash : MonoBehaviour
 
         Debug.Log("Player health = " + playerCurrentLives);
     }
-
+         
     // Update is called once per frame
     void Update()
     {
@@ -116,6 +116,8 @@ public class PlayerFishBash : MonoBehaviour
     {
         // apply damage to enemy using the enemy's take damage function
         enemyToBash.EnemyTakeDamage(playerDamage);
+
+        Debug.Log(attackAnimator);
 
         // animate the attack
         attackAnimator.SetBool("Attack", true);

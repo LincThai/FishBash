@@ -31,6 +31,7 @@ public class EnemyFishBashed : MonoBehaviour
     public Animator fishAnimator;
 
     private Fish currentFish;
+    private Coroutine activeCoroutine;
 
     private void OnEnable()
     {
@@ -79,8 +80,13 @@ public class EnemyFishBashed : MonoBehaviour
         // state check to check in which state the enemy is in
         if (state == 0)
         {
+            if (activeCoroutine != null)
+            {
+                return;
+            }
+
             // start the coroutine of the charged attack
-            StartCoroutine(EnemyAttack());
+            activeCoroutine = StartCoroutine(EnemyAttack());
             // change to the attack state
             state = 1;
             Debug.Log("State =" + state);
@@ -91,8 +97,13 @@ public class EnemyFishBashed : MonoBehaviour
         }
         else if (state == 2)
         {
+            if (activeCoroutine != null)
+            {
+                return;
+            }
+
             // start the coroutine of the cooldown between the enemies attacks
-            StartCoroutine(Delay(Random.Range(enemyAttackCooldownMin, enemyAttackCooldownMax)));
+            activeCoroutine = StartCoroutine(Delay(Random.Range(enemyAttackCooldownMin, enemyAttackCooldownMax)));
         }
         else if (state == 3) { Debug.Log("State =" + state); return; } 
     }
@@ -105,6 +116,8 @@ public class EnemyFishBashed : MonoBehaviour
         yield return new WaitForSeconds(randTime);
 
         //Debug.Log("Delay = " + randTime);
+        // clear the coroutine check
+        activeCoroutine = null;
         // change to the ready state
         state = 0;
         Debug.Log("State =" + state);
@@ -137,6 +150,9 @@ public class EnemyFishBashed : MonoBehaviour
         // play the sound
         FindObjectOfType<AudioManager>().Play("Enemy_Attack");
 
+        // clear the coroutine check
+        activeCoroutine = null;
+        
         // change to the cooldown state
         state = 2;
         Debug.Log("State =" + state);
