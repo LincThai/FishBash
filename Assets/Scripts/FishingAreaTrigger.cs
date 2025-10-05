@@ -91,7 +91,7 @@ public class FishingAreaTrigger : MonoBehaviour
 
     private void OnFishingActionSFX()
     {
-
+        //FindObjectOfType<AudioManager>().Play("");
     }
 
 }

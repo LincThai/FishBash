@@ -96,8 +96,6 @@ public class PlayerFishBash : MonoBehaviour
                 PlayerAttack(animatorLeftFist);
                 // add cooldown
                 nextLeftPunch = playerAttackCooldown;
-                // reset the animator parameter to false
-                animatorLeftFist.SetBool("Attack", false);
             }
             if (attackActionR.IsPressed() && nextRightPunch <= 0)
             {
@@ -105,8 +103,6 @@ public class PlayerFishBash : MonoBehaviour
                 PlayerAttack(animatorRightFist);
                 // add cooldown
                 nextRightPunch = playerAttackCooldown;
-                // reset the animator parameter to false
-                animatorRightFist.SetBool("Attack", false);
             }
         }
         //Debug.Log("Player Health: " + playerCurrentLives);
@@ -117,14 +113,20 @@ public class PlayerFishBash : MonoBehaviour
         // apply damage to enemy using the enemy's take damage function
         enemyToBash.EnemyTakeDamage(playerDamage);
 
-        Debug.Log(attackAnimator);
-
         // animate the attack
         attackAnimator.SetBool("Attack", true);
+        // start a coroutine to wait till the animation is finished to switch the bool
+        StartCoroutine(StopAnimations(attackAnimator, 0.5f));
 
         // play the sound
         FindObjectOfType<AudioManager>().Play("Heavy_Punch");
+    }
 
+    IEnumerator StopAnimations(Animator animator, float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+
+        animator.SetBool("Attack", false);
     }
 
     public void PlayerTakeDamage(int damageTaken)

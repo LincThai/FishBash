@@ -29,6 +29,7 @@ public class EnemyFishBashed : MonoBehaviour
     public PlayerFishBash playerToBash;
     public FishingAreaTrigger fishingAreaTrigger;
     public Animator fishAnimator;
+    public Inventory inventory;
 
     private Fish currentFish;
     private Coroutine activeCoroutine;
@@ -193,6 +194,9 @@ public class EnemyFishBashed : MonoBehaviour
 
         // wait till deactivate
         yield return new WaitForSeconds(3);
+
+        // adds the fish to the inventory list
+        inventory.AddFish(currentFish);
 
         // close the minigame/UI
         results.SetActive(false);
