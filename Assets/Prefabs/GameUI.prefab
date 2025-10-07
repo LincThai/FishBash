@@ -2529,6 +2529,7 @@ MonoBehaviour:
   enemyAttackCooldownMax: 3
   enemyAttackCooldownMin: 1
   enemyChargeTime: 2
+  fightEnd: 0
   fishBashUI: {fileID: 6771629121679478630}
   fishTag: {fileID: 8229210752036079381}
   resultsText: {fileID: 8135077620319652591}
@@ -2538,6 +2539,7 @@ MonoBehaviour:
   playerToBash: {fileID: 4237057296738858821}
   fishingAreaTrigger: {fileID: 0}
   fishAnimator: {fileID: 431002292030552597}
+  inventory: {fileID: 0}
 --- !u!1 &7242188472080460892
 GameObject:
   m_ObjectHideFlags: 0
@@ -3035,7 +3037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &667751353789934440
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3404,7 +3406,15 @@ PrefabInstance:
     m_TransformParent: {fileID: 3008292011965444251}
     m_Modifications:
     - target: {fileID: 1421871625192138802, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1421871625192138802, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097921909021164861, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2097921909021164861, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
@@ -3428,16 +3438,40 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3725394175075951838, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725394175075951838, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725394175075951838, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012922562295706463, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
+      propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5012922562295706463, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5012922562295706463, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5998492855509086607, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
       propertyPath: m_Name
       value: Main_Settings
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998492855509086607, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6077736293118944521, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6077736293118944521, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3532,7 +3566,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8591054225857924266, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591054225857924266, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591054225857924266, guid: 9dc302225fa950e4cb2a9b1ae5fbdd6e, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
