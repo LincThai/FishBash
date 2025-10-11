@@ -47,7 +47,7 @@ MonoBehaviour:
   sounds:
   - name: BGM
     clip: {fileID: 8300000, guid: 0929ef57dbbaf4ab2b7be06ea7210520, type: 3}
-    volume: 1
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -111,7 +111,7 @@ MonoBehaviour:
   - name: Punch_Miss
     clip: {fileID: 8300000, guid: ffff2f50a9e334d89a7dabff91b89662, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 0.1
     loop: 0
     source: {fileID: 0}
     mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
@@ -136,11 +136,18 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
     mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
-  - name: Death
-    clip: {fileID: 8300000, guid: b63a976909db045a181409fac9558fcf, type: 3}
+  - name: Main_Menu
+    clip: {fileID: 8300000, guid: 0e988665c71ff46799374321ebd5941b, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    mixerGroup: {fileID: -5333085382064497465, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Fish_Him
+    clip: {fileID: 8300000, guid: 4c8f37f2caf0348729eeb1f464e9b719, type: 3}
     volume: 1
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
     mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
   mainMixer: {fileID: 24100000, guid: d26a714650213c248a27da6a272e46b2, type: 2}
