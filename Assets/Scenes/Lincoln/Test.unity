@@ -591,7 +591,7 @@ PrefabInstance:
     - target: {fileID: 7609994430885395593, guid: 59a5e545ee1cf854084e7481990233fc, type: 3}
       propertyPath: catchableFish
       value: 
-      objectReference: {fileID: 11400000, guid: 4b3b34de7ec71de4da388035cb5a22ca, type: 2}
+      objectReference: {fileID: 11400000, guid: adf81d07a4de1664abc777209c5c373f, type: 2}
     - target: {fileID: 7609994430885395593, guid: 59a5e545ee1cf854084e7481990233fc, type: 3}
       propertyPath: popupControls
       value: 
@@ -990,6 +990,6 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 39891721}
   - {fileID: 2112451795}
-  - {fileID: 1831242895037109066}
   - {fileID: 743611300}
   - {fileID: 7006653794142874067}
+  - {fileID: 1831242895037109066}

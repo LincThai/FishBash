@@ -11,7 +11,7 @@ public class PlayerFishBash : MonoBehaviour
     public int playerMaxLives = 3;
     public int playerCurrentLives;
     public int playerDamage = 1;
-    public float playerAttackCooldown = 2f;
+    public float playerAttackCooldown = 1f;
     public bool isGuarding = false;
 
     private float nextLeftPunch;
@@ -63,7 +63,7 @@ public class PlayerFishBash : MonoBehaviour
 
         Debug.Log("Player health = " + playerCurrentLives);
     }
-
+         
     // Update is called once per frame
     void Update()
     {
@@ -96,8 +96,6 @@ public class PlayerFishBash : MonoBehaviour
                 PlayerAttack(animatorLeftFist);
                 // add cooldown
                 nextLeftPunch = playerAttackCooldown;
-                // reset the animator parameter to false
-                animatorLeftFist.SetBool("Attack", false);
             }
             if (attackActionR.IsPressed() && nextRightPunch <= 0)
             {
@@ -105,11 +103,9 @@ public class PlayerFishBash : MonoBehaviour
                 PlayerAttack(animatorRightFist);
                 // add cooldown
                 nextRightPunch = playerAttackCooldown;
-                // reset the animator parameter to false
-                animatorRightFist.SetBool("Attack", false);
             }
         }
-        Debug.Log("Player Health: " + playerCurrentLives);
+        //Debug.Log("Player Health: " + playerCurrentLives);
     }
 
     public void PlayerAttack(Animator attackAnimator)
@@ -119,10 +115,18 @@ public class PlayerFishBash : MonoBehaviour
 
         // animate the attack
         attackAnimator.SetBool("Attack", true);
+        // start a coroutine to wait till the animation is finished to switch the bool
+        StartCoroutine(StopAnimations(attackAnimator, 0.5f));
 
         // play the sound
         FindObjectOfType<AudioManager>().Play("Heavy_Punch");
+    }
 
+    IEnumerator StopAnimations(Animator animator, float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+
+        animator.SetBool("Attack", false);
     }
 
     public void PlayerTakeDamage(int damageTaken)
@@ -140,7 +144,7 @@ public class PlayerFishBash : MonoBehaviour
 
             // play damage sound and animation
             FindObjectOfType<AudioManager>().Play("Player_Hurt");
-        
+
             // check if player has less than or 0 lives/health
             if (playerCurrentLives <= 0)
             {
@@ -161,6 +165,9 @@ public class PlayerFishBash : MonoBehaviour
         // show lose screen
         results.SetActive(true);
         resultsText.text = "KO You Lose";
+
+        // stop enemy from attacking
+        enemyToBash.fightEnd = true;
 
         // wait till deactivate
         yield return new WaitForSeconds(3);
