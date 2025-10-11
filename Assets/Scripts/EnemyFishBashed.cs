@@ -180,7 +180,7 @@ public class EnemyFishBashed : MonoBehaviour
     public IEnumerator EnemyDeath()
     {
         // play death sound
-        FindObjectOfType<AudioManager>().Play("Death");
+        FindObjectOfType<AudioManager>().Play("Fish_Him");
 
         // update the fishing area trigger
         fishingAreaTrigger.numOfFish -= 1;
