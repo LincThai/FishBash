@@ -22,7 +22,7 @@ public class EnemyFishBashed : MonoBehaviour
     [Header("References")]
     public GameObject fishBashUI;
     public TMP_Text fishTag;
-    public TMP_Text resultsText;
+    public Animator resultsAnimator;
     public GameObject results;
     public Image enemySprite;
     public HealthBar enemyHealthBar;
@@ -187,13 +187,15 @@ public class EnemyFishBashed : MonoBehaviour
 
         // show lose screen
         results.SetActive(true);
-        resultsText.text = "KO You Win";
+        resultsAnimator.SetBool("Win", true);
 
         // stop enemy attacks
         fightEnd = true;
 
         // wait till deactivate
         yield return new WaitForSeconds(3);
+
+        resultsAnimator.SetBool("Win", false);
 
         // adds the fish to the inventory list
         inventory.AddFish(currentFish);

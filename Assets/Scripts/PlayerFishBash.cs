@@ -24,7 +24,7 @@ public class PlayerFishBash : MonoBehaviour
     public HealthBar playerHealthBar;
     public EnemyFishBashed enemyToBash;
     public FishingAreaTrigger fishAreaTrigger;
-    public TMP_Text resultsText;
+    public Animator resultsAnimator;
     public GameObject results;
     public Animator animatorLeftFist;
     public Animator animatorRightFist;
@@ -183,13 +183,15 @@ public class PlayerFishBash : MonoBehaviour
 
         // show lose screen
         results.SetActive(true);
-        resultsText.text = "KO You Lose";
+        resultsAnimator.SetBool("Lose", true);
 
         // stop enemy from attacking
         enemyToBash.fightEnd = true;
 
         // wait till deactivate
         yield return new WaitForSeconds(3);
+
+        resultsAnimator.SetBool("Lose", false);
 
         // deactivate the ui
         results.SetActive(false);
