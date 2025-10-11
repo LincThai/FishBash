@@ -176,7 +176,7 @@ public class PlayerFishBash : MonoBehaviour
     public IEnumerator PlayerDeath()
     {
         // play lose sound
-        FindObjectOfType<AudioManager>().Play("Death");
+        FindObjectOfType<AudioManager>().Play("You_Lose");
 
         // update the fishing area trigger
         fishAreaTrigger.numOfFish -= 1;
