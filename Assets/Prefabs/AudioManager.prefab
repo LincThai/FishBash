@@ -150,4 +150,11 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
     mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: You_Lose
+    clip: {fileID: 8300000, guid: a99aadcfdf9e34cda8ec9655b40a539c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
   mainMixer: {fileID: 24100000, guid: d26a714650213c248a27da6a272e46b2, type: 2}
