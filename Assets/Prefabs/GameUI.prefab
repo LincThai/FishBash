@@ -1302,7 +1302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -625}
+  m_AnchoredPosition: {x: 0, y: -1055}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &232458319981521821
@@ -1353,7 +1353,7 @@ Animator:
   m_GameObject: {fileID: 4026368264535530730}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6eac953dd06246c4c85b03d2fb871ad3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1719,7 +1719,9 @@ MonoBehaviour:
   animatorLeftFist: {fileID: 8665891350424036185}
   animatorRightFist: {fileID: 4342033007574190447}
   animatorBlockArms: {fileID: 4344095291602525809}
-  gaurdArms: {fileID: 4026368264535530730}
+  animatorGaurdArms: {fileID: 0}
+  leftArm: {fileID: 0}
+  rightArm: {fileID: 0}
   leftCooldown: {fileID: 412580141833120807}
   rightCooldown: {fileID: 1881883657235364907}
 --- !u!1 &5092537143688139284
@@ -3037,7 +3039,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &667751353789934440
 RectTransform:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Security.Cryptography.X509Certificates;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -28,7 +29,9 @@ public class PlayerFishBash : MonoBehaviour
     public Animator animatorLeftFist;
     public Animator animatorRightFist;
     public Animator animatorBlockArms;
-    public GameObject gaurdArms;
+    public Animator animatorGaurdArms;
+    public GameObject leftArm;
+    public GameObject rightArm;
     public Cooldown leftCooldown;
     public Cooldown rightCooldown;
 
@@ -73,9 +76,25 @@ public class PlayerFishBash : MonoBehaviour
             // change the bool
             isGuarding = true;
 
+            // deactivate both left and right arms
+            leftArm.SetActive(false);
+            rightArm.SetActive(false);
+
             // do the animation
+            animatorGaurdArms.SetBool("IsBlock", true);
         }
-        else { isGuarding = false; }
+        else 
+        { 
+            // change bool
+            isGuarding = false;
+
+            // deactivate both left and right arms
+            leftArm.SetActive(false);
+            rightArm.SetActive(false);
+
+            // end the animation
+            animatorGaurdArms.SetBool("IsBlock", false);
+        }
 
         // decrease the cooldown
         nextLeftPunch -= Time.deltaTime;
