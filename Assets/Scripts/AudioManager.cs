@@ -52,7 +52,7 @@ public class AudioManager : MonoBehaviour
         mainMixer.SetFloat("SFXVolume", PlayerPrefs.GetFloat("sfxVolume", 0));
 
         // plays background music.
-        Play("BGM");
+        Play("Main_Menu");
     }
 
     public void Play(string name)

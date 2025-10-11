@@ -27,6 +27,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        // play the Game Background Sound
+        FindObjectOfType<AudioManager>().Play("BGM");
+    }
+
     private void Update()
     {
         
