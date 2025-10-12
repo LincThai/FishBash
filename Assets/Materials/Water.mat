@@ -137,10 +137,10 @@ Material:
     - _Water_Refraction_Scale: 3.15
     - _Water_Refraction_Speed: 0.19
     - _Water_Texture_Scale: 0.51
-    - _Wave_Frequency: 136.72
-    - _Wave_Height: 0.00132
+    - _Wave_Frequency: 1.103
+    - _Wave_Height: 0.0226
     - _Wave_Offset: 0
-    - _Wave_Speed: 1.12
+    - _Wave_Speed: 0.28
     - _Wave_Vertical_Offset: 0.0079
     - _WorkflowMode: 1
     - _ZWrite: 1
