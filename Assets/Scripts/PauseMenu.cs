@@ -59,6 +59,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         // Loads the title screen which should always be scene index 0
         SceneManager.LoadScene(0);
+        // stop game bgm
+        FindObjectOfType<AudioManager>().Stop("BGM");
     }
 
     public void QuitGame()

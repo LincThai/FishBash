@@ -1812,14 +1812,14 @@ MonoBehaviour:
   playerHealthBar: {fileID: 572175384716017104}
   enemyToBash: {fileID: 7183466501177092044}
   fishAreaTrigger: {fileID: 0}
-  resultsText: {fileID: 0}
+  resultsAnimator: {fileID: 2704676291420654647}
   results: {fileID: 247117057843053316}
   animatorLeftFist: {fileID: 8665891350424036185}
   animatorRightFist: {fileID: 4342033007574190447}
   animatorBlockArms: {fileID: 4344095291602525809}
-  animatorGaurdArms: {fileID: 0}
-  leftArm: {fileID: 0}
-  rightArm: {fileID: 0}
+  animatorGaurdArms: {fileID: 4344095291602525809}
+  leftArm: {fileID: 3624661348324873461}
+  rightArm: {fileID: 6640228275174260240}
   leftCooldown: {fileID: 412580141833120807}
   rightCooldown: {fileID: 1881883657235364907}
 --- !u!1 &5383100353592594530
@@ -2496,7 +2496,7 @@ MonoBehaviour:
   fightEnd: 0
   fishBashUI: {fileID: 6771629121679478630}
   fishTag: {fileID: 8229210752036079381}
-  resultsText: {fileID: 0}
+  resultsAnimator: {fileID: 2704676291420654647}
   results: {fileID: 247117057843053316}
   enemySprite: {fileID: 3147198916899992896}
   enemyHealthBar: {fileID: 2401296263312830329}

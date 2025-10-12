@@ -16,6 +16,8 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         // stop the main menu background music
         FindObjectOfType<AudioManager>().Stop("Main_Menu");
+        // play the Game Background Sound
+        FindObjectOfType<AudioManager>().Play("BGM");
     }
 
     // quits the game leaving the closing the application
