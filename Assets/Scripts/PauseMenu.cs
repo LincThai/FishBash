@@ -61,6 +61,8 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(0);
         // stop game bgm
         FindObjectOfType<AudioManager>().Stop("BGM");
+        // play main menu music
+        FindObjectOfType<AudioManager>().Play("Main_Menu");
     }
 
     public void QuitGame()
