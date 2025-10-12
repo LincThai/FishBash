@@ -89,8 +89,8 @@ public class PlayerFishBash : MonoBehaviour
             isGuarding = false;
 
             // deactivate both left and right arms
-            leftArm.SetActive(false);
-            rightArm.SetActive(false);
+            leftArm.SetActive(true);
+            rightArm.SetActive(true);
 
             // end the animation
             animatorGaurdArms.SetBool("IsBlock", false);
