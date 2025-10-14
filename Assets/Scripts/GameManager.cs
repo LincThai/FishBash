@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public FishingAreaTrigger currentFishArea;
     
     // dialogue and quest variables
+    RadioDialogue radioDialogue;
     public DialogueQuest[] dialogueQuests;
     private int dialogue_Index = 0;
 
@@ -25,6 +26,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        radioDialogue = RadioDialogue.instance;
     }
 
     private void Update()
@@ -46,5 +49,12 @@ public class GameManager : MonoBehaviour
             }
             else { return; }
         }
+    }
+
+    // function to trigger the dialogue
+    public void TriggerDialogue(DialogueQuest dialogue)
+    {
+        // call the start dialogue function by passing in dialogue
+        radioDialogue.StartDialogue(dialogue);
     }
 }
