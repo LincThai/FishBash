@@ -17,7 +17,8 @@ public class RadioDialogue : MonoBehaviour
     public TMP_Text dialogueText;
     public GameObject textBox;
     public Image icon;
-    public Animator animator;
+    public Animator animatorTextBox;
+    //public Animator catAnimator;
 
     // inputs
     private InputAction nextAction;
@@ -55,7 +56,7 @@ public class RadioDialogue : MonoBehaviour
     public void StartDialogue(DialogueQuest dialogue)
     {
         // play open animation
-        animator.SetBool("isOpen", true);
+        animatorTextBox.SetBool("isOpen", true);
 
         // clears the queue
         sentences.Clear();
@@ -102,7 +103,7 @@ public class RadioDialogue : MonoBehaviour
     {
         Debug.Log("End Dialogue");
         // play close animation
-        animator.SetBool("isOpen", false);
+        animatorTextBox.SetBool("isOpen", false);
         // set the the bool for when the dialogue has been completed to true
         GameManager.instance.dialogueFinished = true;
     }
