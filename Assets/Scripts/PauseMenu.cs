@@ -1,17 +1,25 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     // set variables   
     public static bool GameIsPaused = false;
-
+    // references
     public GameObject pauseMenuUI;
+    // inputs
+    private InputAction pauseAction;
+
+    private void Awake()
+    {
+        pauseAction = InputSystem.actions.FindAction("Pause");
+    }
 
     void Update()
     {
         // when escape is pressed
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (pauseAction.IsPressed())
         {
             // check if game is paused
             if (GameIsPaused)

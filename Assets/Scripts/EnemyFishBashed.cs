@@ -81,6 +81,7 @@ public class EnemyFishBashed : MonoBehaviour
         // state check to check in which state the enemy is in
         if (state == 0)
         {
+            // check if the assigned coroutine is active and stops it from being started again
             if (activeCoroutine != null)
             {
                 return;
@@ -98,6 +99,7 @@ public class EnemyFishBashed : MonoBehaviour
         }
         else if (state == 2)
         {
+            // check if the assigned coroutine is active and stops it from being started again
             if (activeCoroutine != null)
             {
                 return;

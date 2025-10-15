@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class RadioDialogue : MonoBehaviour
@@ -18,6 +19,9 @@ public class RadioDialogue : MonoBehaviour
     public Image icon;
     public Animator animator;
 
+    // inputs
+    private InputAction nextAction;
+
     private void Awake()
     {
         // a singleton to make sure there is only one of these in the scene
@@ -30,11 +34,22 @@ public class RadioDialogue : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        nextAction = InputSystem.actions.FindAction("NextSentence");
     }
 
     private void Start()
     {
         sentences = new Queue<string>();
+    }
+
+    private void Update()
+    {
+        if (nextAction.IsPressed())
+        {
+            // start the next sentence
+            DisplayNextSentence();
+        }
     }
 
     public void StartDialogue(DialogueQuest dialogue)
@@ -88,6 +103,8 @@ public class RadioDialogue : MonoBehaviour
         Debug.Log("End Dialogue");
         // play close animation
         animator.SetBool("isOpen", false);
+        // set the the bool for when the dialogue has been completed to true
+        GameManager.instance.dialogueFinished = true;
     }
 
 }
