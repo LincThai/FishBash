@@ -2259,7 +2259,7 @@ MonoBehaviour:
   dialogueText: {fileID: 932274649970166094}
   textBox: {fileID: 106502213896440136}
   icon: {fileID: 5001362663709705583}
-  animator: {fileID: 6723310165110103873}
+  animatorTextBox: {fileID: 6723310165110103873}
 --- !u!1 &7191943319503981805
 GameObject:
   m_ObjectHideFlags: 0
