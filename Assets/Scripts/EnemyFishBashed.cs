@@ -33,6 +33,8 @@ public class EnemyFishBashed : MonoBehaviour
 
     private Fish currentFish;
     private Coroutine activeCoroutine;
+    // animations
+    bool animatorSet = false;
 
     private void OnEnable()
     {
@@ -56,18 +58,20 @@ public class EnemyFishBashed : MonoBehaviour
         enemyHealthBar.SetMaxHealth(enemyMaxHealth);
         enemyHealthBar.SetHealth(enemyCurrentHealth);
 
+        // reset animation
+        animatorSet = false;
         // fightEnd variable reset
         fightEnd = false;
+        state = 2;
     }
 
     // Update is called once per frame
     void Update()
     {
-        // animations
-        bool animatorSet = false;
-
         if(!animatorSet)
         {
+            // swap animator animation
+            Debug.Log("Swapped the animation");
             fishAnimator.runtimeAnimatorController = currentFish.animationOverrideController;
             animatorSet = true;
         }
@@ -75,12 +79,15 @@ public class EnemyFishBashed : MonoBehaviour
         // set to end state when game ends
         if (fightEnd)
         {
+            // change to the end state
+            Debug.Log("End Fight");
             state = 3;
         }
 
         // state check to check in which state the enemy is in
         if (state == 0)
         {
+            // check if the assigned coroutine is active and stops it from being started again
             if (activeCoroutine != null)
             {
                 return;
@@ -98,6 +105,7 @@ public class EnemyFishBashed : MonoBehaviour
         }
         else if (state == 2)
         {
+            // check if the assigned coroutine is active and stops it from being started again
             if (activeCoroutine != null)
             {
                 return;

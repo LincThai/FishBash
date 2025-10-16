@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class RadioDialogue : MonoBehaviour
@@ -16,7 +17,11 @@ public class RadioDialogue : MonoBehaviour
     public TMP_Text dialogueText;
     public GameObject textBox;
     public Image icon;
-    public Animator animator;
+    public Animator animatorTextBox;
+    //public Animator catAnimator;
+
+    // inputs
+    private InputAction nextAction;
 
     private void Awake()
     {
@@ -30,6 +35,8 @@ public class RadioDialogue : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        nextAction = InputSystem.actions.FindAction("NextSentence");
     }
 
     private void Start()
@@ -37,10 +44,19 @@ public class RadioDialogue : MonoBehaviour
         sentences = new Queue<string>();
     }
 
+    private void Update()
+    {
+        if (nextAction.IsPressed())
+        {
+            // start the next sentence
+            DisplayNextSentence();
+        }
+    }
+
     public void StartDialogue(DialogueQuest dialogue)
     {
         // play open animation
-        animator.SetBool("isOpen", true);
+        animatorTextBox.SetBool("isOpen", true);
 
         // clears the queue
         sentences.Clear();
@@ -87,7 +103,9 @@ public class RadioDialogue : MonoBehaviour
     {
         Debug.Log("End Dialogue");
         // play close animation
-        animator.SetBool("isOpen", false);
+        animatorTextBox.SetBool("isOpen", false);
+        // set the the bool for when the dialogue has been completed to true
+        GameManager.instance.dialogueFinished = true;
     }
 
 }
