@@ -133,7 +133,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 4c8f37f2caf0348729eeb1f464e9b719, type: 3}
     volume: 1
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
     mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
   - name: You_Lose
@@ -141,6 +141,20 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Cat_Angry
+    clip: {fileID: 8300000, guid: cc201131c3b234e48b63e677fb79f833, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Cat_Meow
+    clip: {fileID: 8300000, guid: 3bccfec1a795a4b89a6e3b47008e9615, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
     mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
   mainMixer: {fileID: 24100000, guid: d26a714650213c248a27da6a272e46b2, type: 2}
