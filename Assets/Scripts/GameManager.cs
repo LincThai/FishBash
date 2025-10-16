@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
     {
         if (dialogueQuests != null)
         {
+            dialogue_Index = 0;
             // call questmanager function to get the quest objective
             questManager();
         }
