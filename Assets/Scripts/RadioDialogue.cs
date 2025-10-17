@@ -15,7 +15,6 @@ public class RadioDialogue : MonoBehaviour
 
     // references
     public TMP_Text dialogueText;
-    public GameObject textBox;
     public Image icon;
     public Animator animatorTextBox;
     //public Animator catAnimator;
@@ -35,21 +34,22 @@ public class RadioDialogue : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-
-        nextAction = InputSystem.actions.FindAction("NextSentence");
-    }
-
-    private void Start()
-    {
+        // initialize the queue
         sentences = new Queue<string>();
+        // connect the inputs
+        nextAction = InputSystem.actions.FindAction("NextSentence");
     }
 
     private void Update()
     {
-        if (nextAction.IsPressed())
+        if (sentences.Count >= 0)
         {
-            // start the next sentence
-            DisplayNextSentence();
+            // check for input to change to the next sentence in the dialogue
+            if (nextAction.WasPressedThisFrame())
+            {
+                // start the next sentence
+                DisplayNextSentence();
+            }
         }
     }
 
