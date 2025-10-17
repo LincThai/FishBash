@@ -42,7 +42,7 @@ public class RadioDialogue : MonoBehaviour
 
     private void Update()
     {
-        if (sentences.Count != null)
+        if (sentences.Count >= 0)
         {
             // check for input to change to the next sentence in the dialogue
             if (nextAction.IsPressed())
