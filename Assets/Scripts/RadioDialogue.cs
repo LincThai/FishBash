@@ -45,7 +45,7 @@ public class RadioDialogue : MonoBehaviour
         if (sentences.Count >= 0)
         {
             // check for input to change to the next sentence in the dialogue
-            if (nextAction.IsPressed())
+            if (nextAction.WasPressedThisFrame())
             {
                 // start the next sentence
                 DisplayNextSentence();
