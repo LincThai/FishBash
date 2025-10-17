@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentFishArea: {fileID: 0}
   dialogueQuests:
+  - {fileID: 11400000, guid: 1c7c06a3872198742a40ae6dc88a60f0, type: 2}
   - {fileID: 11400000, guid: 388780da6d1b916488fb1e9269557edc, type: 2}
   - {fileID: 11400000, guid: 388780da6d1b916488fb1e9269557edc, type: 2}
   - {fileID: 11400000, guid: 388780da6d1b916488fb1e9269557edc, type: 2}

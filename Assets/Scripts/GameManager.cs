@@ -34,15 +34,16 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+    }
+
+    private void Start()
+    {
         // connect the dialogue system to the game manager
         radioDialogue = RadioDialogue.instance;
 
         // connect the inventory system to the game manager
         inventory = FindAnyObjectByType<Inventory>();
-    }
 
-    private void Start()
-    {
         if (dialogueQuests != null)
         {
             dialogue_Index = 0;
@@ -105,6 +106,8 @@ public class GameManager : MonoBehaviour
 
     IEnumerator DialogueWait(float delay)
     {
+        Debug.Log("Waiting Till next Call");
+        // wait till the next dialogue
         yield return new WaitForSeconds(delay);
         // call quest manager
         questManager();
