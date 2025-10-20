@@ -22,12 +22,6 @@ public class WaveManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        // Play Wave Sounds
-        FindObjectOfType<AudioManager>().Play("Waves");
-    }
-
     private void Update()
     {
         offset += Time.deltaTime * speed;

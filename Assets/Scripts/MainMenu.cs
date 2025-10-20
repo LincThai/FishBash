@@ -18,6 +18,8 @@ public class MainMenu : MonoBehaviour
         FindObjectOfType<AudioManager>().Stop("Main_Menu");
         // play the Game Background Sound
         FindObjectOfType<AudioManager>().Play("BGM");
+        // Play Wave Sounds
+        FindObjectOfType<AudioManager>().Play("Waves");
     }
 
     // quits the game leaving the closing the application

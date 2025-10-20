@@ -71,6 +71,8 @@ public class PauseMenu : MonoBehaviour
         FindObjectOfType<AudioManager>().Stop("BGM");
         // play main menu music
         FindObjectOfType<AudioManager>().Play("Main_Menu");
+        // stop Wave Sounds
+        FindObjectOfType<AudioManager>().Stop("Waves");
     }
 
     public void QuitGame()
