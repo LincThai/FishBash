@@ -19,7 +19,7 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         // when escape is pressed
-        if (pauseAction.IsPressed())
+        if (pauseAction.WasPressedThisFrame())
         {
             // check if game is paused
             if (GameIsPaused)
