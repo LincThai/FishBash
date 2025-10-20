@@ -63,7 +63,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 25, y: 5, z: 25}
+  m_Size: {x: 40, y: 5, z: 40}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7609994430885395593
 MonoBehaviour:
@@ -77,8 +77,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881c995efdfe19c4da627a4ffdd9fa5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  catchableFish: {fileID: 11400000, guid: adf81d07a4de1664abc777209c5c373f, type: 2}
+  catchableFish: {fileID: 11400000, guid: 4b3b34de7ec71de4da388035cb5a22ca, type: 2}
   numOfFish: 5
+  popupInteractInput: {fileID: 0}
   fishBashUI: {fileID: 0}
 --- !u!114 &1718646299243828917
 MonoBehaviour:

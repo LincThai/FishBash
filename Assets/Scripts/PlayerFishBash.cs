@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Security.Cryptography.X509Certificates;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -23,12 +24,14 @@ public class PlayerFishBash : MonoBehaviour
     public HealthBar playerHealthBar;
     public EnemyFishBashed enemyToBash;
     public FishingAreaTrigger fishAreaTrigger;
-    public TMP_Text resultsText;
+    public Animator resultsAnimator;
     public GameObject results;
     public Animator animatorLeftFist;
     public Animator animatorRightFist;
     public Animator animatorBlockArms;
-    public GameObject gaurdArms;
+    public Animator animatorGaurdArms;
+    public GameObject leftArm;
+    public GameObject rightArm;
     public Cooldown leftCooldown;
     public Cooldown rightCooldown;
 
@@ -73,9 +76,25 @@ public class PlayerFishBash : MonoBehaviour
             // change the bool
             isGuarding = true;
 
+            // deactivate both left and right arms
+            leftArm.SetActive(false);
+            rightArm.SetActive(false);
+
             // do the animation
+            animatorGaurdArms.SetBool("IsBlock", true);
         }
-        else { isGuarding = false; }
+        else 
+        { 
+            // change bool
+            isGuarding = false;
+
+            // deactivate both left and right arms
+            leftArm.SetActive(true);
+            rightArm.SetActive(true);
+
+            // end the animation
+            animatorGaurdArms.SetBool("IsBlock", false);
+        }
 
         // decrease the cooldown
         nextLeftPunch -= Time.deltaTime;
@@ -157,20 +176,22 @@ public class PlayerFishBash : MonoBehaviour
     public IEnumerator PlayerDeath()
     {
         // play lose sound
-        FindObjectOfType<AudioManager>().Play("Death");
+        FindObjectOfType<AudioManager>().Play("You_Lose");
 
         // update the fishing area trigger
         fishAreaTrigger.numOfFish -= 1;
 
         // show lose screen
         results.SetActive(true);
-        resultsText.text = "KO You Lose";
+        resultsAnimator.SetBool("Lose", true);
 
         // stop enemy from attacking
         enemyToBash.fightEnd = true;
 
         // wait till deactivate
         yield return new WaitForSeconds(3);
+
+        resultsAnimator.SetBool("Lose", false);
 
         // deactivate the ui
         results.SetActive(false);

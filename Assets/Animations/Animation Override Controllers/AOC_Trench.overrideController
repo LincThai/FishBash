@@ -8,4 +8,10 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: AOC_Trench
   m_Controller: {fileID: 9100000, guid: 6814750b51fb09b4c8fa050be29ec657, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: f798f5133724f564cb7ce5f543c639eb, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 2644723cd4e5c7a4fa756676f731c499, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f440f7d905cf6f3429e26934418f8f02, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9293c7c9aa9eebb4bb093382d1c2e5da, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7efe90ef2535f2142829d54ff51c296a, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e34cae9fabb41cf40850ec30bf5ca66e, type: 2}
