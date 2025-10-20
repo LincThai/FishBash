@@ -2,25 +2,62 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class RadioDialogue : MonoBehaviour
 {
     // set variables
+    // singleton variable
+    public static RadioDialogue instance;
+    // text variable
     public Queue<string> sentences;
 
     // references
     public TMP_Text dialogueText;
-    public GameObject textBox;
     public Image icon;
+    public Animator animatorTextBox;
+    //public Animator catAnimator;
 
-    private void Start()
+    // inputs
+    private InputAction nextAction;
+
+    private void Awake()
     {
+        // a singleton to make sure there is only one of these in the scene
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        // initialize the queue
         sentences = new Queue<string>();
+        // connect the inputs
+        nextAction = InputSystem.actions.FindAction("NextSentence");
+    }
+
+    private void Update()
+    {
+        if (sentences.Count >= 0)
+        {
+            // check for input to change to the next sentence in the dialogue
+            if (nextAction.WasPressedThisFrame())
+            {
+                // start the next sentence
+                DisplayNextSentence();
+            }
+        }
     }
 
     public void StartDialogue(DialogueQuest dialogue)
     {
+        // play open animation
+        animatorTextBox.SetBool("isOpen", true);
+
         // clears the queue
         sentences.Clear();
 
@@ -65,6 +102,10 @@ public class RadioDialogue : MonoBehaviour
     public void EndDialogue()
     {
         Debug.Log("End Dialogue");
+        // play close animation
+        animatorTextBox.SetBool("isOpen", false);
+        // set the the bool for when the dialogue has been completed to true
+        GameManager.instance.dialogueFinished = true;
     }
 
 }

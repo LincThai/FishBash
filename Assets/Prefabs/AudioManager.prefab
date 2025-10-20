@@ -47,7 +47,14 @@ MonoBehaviour:
   sounds:
   - name: BGM
     clip: {fileID: 8300000, guid: 0929ef57dbbaf4ab2b7be06ea7210520, type: 3}
-    volume: 1
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    mixerGroup: {fileID: -5333085382064497465, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Main_Menu
+    clip: {fileID: 8300000, guid: 0e988665c71ff46799374321ebd5941b, type: 3}
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -62,36 +69,92 @@ MonoBehaviour:
   - name: Heavy_Punch
     clip: {fileID: 8300000, guid: 685c154ca27b04b25b4b84506a8e8ce5, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
     mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
   - name: Motor
     clip: {fileID: 8300000, guid: d7156715d4a2042de9197848405a53de, type: 3}
     volume: 1
-    pitch: 0
-    loop: 1
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
-    mixerGroup: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
   - name: Fish_Hurt
     clip: {fileID: 8300000, guid: 940e5d8311f4649c6a5ebd29145489bf, type: 3}
     volume: 1
-    pitch: 0
+    pitch: 1
     loop: 0
     source: {fileID: 0}
     mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
   - name: Waves
     clip: {fileID: 8300000, guid: 75b44e2480e0f4be6aa1dcfbf03989ad, type: 3}
-    volume: 1
-    pitch: 0
+    volume: 0.2
+    pitch: 1
     loop: 0
     source: {fileID: 0}
     mixerGroup: {fileID: -5333085382064497465, guid: d26a714650213c248a27da6a272e46b2, type: 2}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0
+  - name: Ping
+    clip: {fileID: 8300000, guid: adbe46a044c974b009cef20705ca3649, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}
-    mixerGroup: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Block
+    clip: {fileID: 8300000, guid: cf18e6843ac0c48188cf82e71d31f7a8, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Charge_Up
+    clip: {fileID: 8300000, guid: 5f0631d5c8e194e9982eb4ab3166d197, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Cooldown
+    clip: {fileID: 8300000, guid: 81a92cf1f25f441f0a73a1fd98bb32d3, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Enemy_Attack
+    clip: {fileID: 8300000, guid: 83ba319752f0a46fb863b8391588823e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Fish_Him
+    clip: {fileID: 8300000, guid: 4c8f37f2caf0348729eeb1f464e9b719, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: You_Lose
+    clip: {fileID: 8300000, guid: a99aadcfdf9e34cda8ec9655b40a539c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Cat_Angry
+    clip: {fileID: 8300000, guid: cc201131c3b234e48b63e677fb79f833, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
+  - name: Cat_Meow
+    clip: {fileID: 8300000, guid: 3bccfec1a795a4b89a6e3b47008e9615, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    mixerGroup: {fileID: -119175306285731245, guid: d26a714650213c248a27da6a272e46b2, type: 2}
   mainMixer: {fileID: 24100000, guid: d26a714650213c248a27da6a272e46b2, type: 2}

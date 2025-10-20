@@ -16,3 +16,9 @@ MonoBehaviour:
   description: A fish that comes pre-packaged for all to eat. They live in schools
     of 3 inside a can as they fit perfectly with enough wriggle room.
   fishSprite: {fileID: 21300000, guid: 396741143ac04f4419805c69098272fc, type: 3}
+  animationOverrideController: {fileID: 22100000, guid: da8dab45292f07e4e93f4a2502be464c, type: 2}
+  MaxHealth: 3
+  damage: 1
+  attackMaxCooldown: 5
+  attackMinCooldown: 3
+  attackChargeTime: 1

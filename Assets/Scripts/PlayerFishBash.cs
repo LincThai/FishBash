@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Security.Cryptography.X509Certificates;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,7 +12,7 @@ public class PlayerFishBash : MonoBehaviour
     public int playerMaxLives = 3;
     public int playerCurrentLives;
     public int playerDamage = 1;
-    public float playerAttackCooldown = 2f;
+    public float playerAttackCooldown = 1f;
     public bool isGuarding = false;
 
     private float nextLeftPunch;
@@ -23,8 +24,16 @@ public class PlayerFishBash : MonoBehaviour
     public HealthBar playerHealthBar;
     public EnemyFishBashed enemyToBash;
     public FishingAreaTrigger fishAreaTrigger;
-    public TMP_Text resultsText;
+    public Animator resultsAnimator;
     public GameObject results;
+    public Animator animatorLeftFist;
+    public Animator animatorRightFist;
+    public Animator animatorBlockArms;
+    public Animator animatorGaurdArms;
+    public GameObject leftArm;
+    public GameObject rightArm;
+    public Cooldown leftCooldown;
+    public Cooldown rightCooldown;
 
     // inputs
     private InputAction guardAction;
@@ -41,9 +50,6 @@ public class PlayerFishBash : MonoBehaviour
 
     private void OnEnable()
     {
-        // connect to game manager
-        GameManager.instance._PlayerFishBash = this;
-
         // assign the fishing trigger
         fishAreaTrigger = GameManager.instance.currentFishArea;
 
@@ -52,9 +58,15 @@ public class PlayerFishBash : MonoBehaviour
         playerHealthBar.SetMaxHealth(playerMaxLives);
         playerHealthBar.SetHealth(playerCurrentLives);
 
-        Debug.Log("player health = " + playerCurrentLives);
-    }
+        // set cooldown to zero
+        leftCooldown.SetFillAmount(0);
+        rightCooldown.SetFillAmount(0);
+        nextLeftPunch = 0;
+        nextRightPunch = 0;
 
+        Debug.Log("Player health = " + playerCurrentLives);
+    }
+         
     // Update is called once per frame
     void Update()
     {
@@ -64,39 +76,76 @@ public class PlayerFishBash : MonoBehaviour
             // change the bool
             isGuarding = true;
 
+            // deactivate both left and right arms
+            leftArm.SetActive(false);
+            rightArm.SetActive(false);
+
             // do the animation
+            animatorGaurdArms.SetBool("IsBlock", true);
         }
-        else { isGuarding = false; }
+        else 
+        { 
+            // change bool
+            isGuarding = false;
+
+            // deactivate both left and right arms
+            leftArm.SetActive(true);
+            rightArm.SetActive(true);
+
+            // end the animation
+            animatorGaurdArms.SetBool("IsBlock", false);
+        }
+
+        // decrease the cooldown
+        nextLeftPunch -= Time.deltaTime;
+        nextRightPunch -= Time.deltaTime;
+        // play sound effect
+        if (nextLeftPunch < 0) { FindObjectOfType<AudioManager>().Play("Cooldown"); }
+        if (nextRightPunch < 0) { FindObjectOfType<AudioManager>().Play("Cooldown"); }
+
+        // apply to UI
+        leftCooldown.SetFillAmount(nextLeftPunch/playerAttackCooldown);
+        rightCooldown.SetFillAmount(nextRightPunch/playerAttackCooldown);
 
         if (!isGuarding)
         {
-            if (attackActionL.IsPressed() && Time.time >= nextLeftPunch)
+            if (attackActionL.IsPressed() && nextLeftPunch <= 0)
             {
-                // call the attack function passing in the left hand animation
-                PlayerAttack();
+                // call the attack function passing in the left hand animator
+                PlayerAttack(animatorLeftFist);
                 // add cooldown
-                nextLeftPunch = Time.time + playerAttackCooldown;
+                nextLeftPunch = playerAttackCooldown;
             }
-            if (attackActionR.IsPressed() && Time.time >= nextRightPunch)
+            if (attackActionR.IsPressed() && nextRightPunch <= 0)
             {
-                // call the attack function passing in the right hand animation
-                PlayerAttack();
+                // call the attack function passing in the right hand animator
+                PlayerAttack(animatorRightFist);
                 // add cooldown
-                nextRightPunch = Time.time + playerAttackCooldown;
+                nextRightPunch = playerAttackCooldown;
             }
         }
+        //Debug.Log("Player Health: " + playerCurrentLives);
     }
 
-    public void PlayerAttack()
+    public void PlayerAttack(Animator attackAnimator)
     {
         // apply damage to enemy using the enemy's take damage function
         enemyToBash.EnemyTakeDamage(playerDamage);
 
         // animate the attack
+        attackAnimator.SetBool("Attack", true);
+        // start a coroutine to wait till the animation is finished to switch the bool
+        StartCoroutine(StopAnimations(attackAnimator, 0.5f));
 
         // play the sound
-        FindObjectOfType<AudioManager>().Play("Punch");
+        FindObjectOfType<AudioManager>().Play("Heavy_Punch");
+    }
 
+    IEnumerator StopAnimations(Animator animator, float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+
+        animator.SetBool("Attack", false);
     }
 
     public void PlayerTakeDamage(int damageTaken)
@@ -107,12 +156,14 @@ public class PlayerFishBash : MonoBehaviour
             // reduce life/health
             playerCurrentLives -= damageTaken;
 
+            Debug.Log("Damage Taken: " + damageTaken);
+
             // update in UI
             playerHealthBar.SetHealth(playerCurrentLives);
 
             // play damage sound and animation
-            FindObjectOfType<AudioManager>().Play("Hurt");
-        
+            FindObjectOfType<AudioManager>().Play("Player_Hurt");
+
             // check if player has less than or 0 lives/health
             if (playerCurrentLives <= 0)
             {
@@ -125,17 +176,22 @@ public class PlayerFishBash : MonoBehaviour
     public IEnumerator PlayerDeath()
     {
         // play lose sound
-        FindObjectOfType<AudioManager>().Play("Death");
+        FindObjectOfType<AudioManager>().Play("You_Lose");
 
         // update the fishing area trigger
         fishAreaTrigger.numOfFish -= 1;
 
         // show lose screen
         results.SetActive(true);
-        resultsText.text = "KO You Lose";
+        resultsAnimator.SetBool("Lose", true);
+
+        // stop enemy from attacking
+        enemyToBash.fightEnd = true;
 
         // wait till deactivate
         yield return new WaitForSeconds(3);
+
+        resultsAnimator.SetBool("Lose", false);
 
         // deactivate the ui
         results.SetActive(false);

@@ -1,17 +1,25 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     // set variables   
     public static bool GameIsPaused = false;
-
+    // references
     public GameObject pauseMenuUI;
+    // inputs
+    private InputAction pauseAction;
+
+    private void Awake()
+    {
+        pauseAction = InputSystem.actions.FindAction("Pause");
+    }
 
     void Update()
     {
         // when escape is pressed
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (pauseAction.IsPressed())
         {
             // check if game is paused
             if (GameIsPaused)
@@ -59,6 +67,10 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         // Loads the title screen which should always be scene index 0
         SceneManager.LoadScene(0);
+        // stop game bgm
+        FindObjectOfType<AudioManager>().Stop("BGM");
+        // play main menu music
+        FindObjectOfType<AudioManager>().Play("Main_Menu");
     }
 
     public void QuitGame()

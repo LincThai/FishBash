@@ -17,3 +17,9 @@ MonoBehaviour:
     these shoes. Their Jays are their life and and damage or dirt on their Jays will
     make them lose control in unhindered anger.
   fishSprite: {fileID: 21300000, guid: ff3d158b14c812d4589f1fce1ce2bb5f, type: 3}
+  animationOverrideController: {fileID: 22100000, guid: facd746ac10f1cc469d00e292ce69516, type: 2}
+  MaxHealth: 3
+  damage: 1
+  attackMaxCooldown: 5
+  attackMinCooldown: 3
+  attackChargeTime: 2.1

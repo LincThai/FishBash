@@ -10,10 +10,11 @@ public class Fish : ScriptableObject
     public string description;
     // UI/Animation
     public Sprite fishSprite;
+    public AnimatorOverrideController animationOverrideController;
     // Combat Data
     public int MaxHealth = 3;
     public int damage = 1;
-    public float attackMaxCooldown = 3;
+    public float attackMaxCooldown = 5;
     public float attackMinCooldown = 1;
     public float attackChargeTime = 2;
 
