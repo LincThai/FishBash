@@ -63,6 +63,16 @@ public class EnemyFishBashed : MonoBehaviour
         // fightEnd variable reset
         fightEnd = false;
         state = 2;
+        Debug.Log("Start State Is" + state + " and The fight end is " + fightEnd);
+    }
+
+    private void OnDisable()
+    {
+        // reset animation
+        animatorSet = false;
+        // fightEnd variable reset
+        fightEnd = false;
+        state = 2;
     }
 
     // Update is called once per frame
