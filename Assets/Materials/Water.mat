@@ -100,17 +100,19 @@ Material:
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
+    - _Blend_Factor: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
+    - _Depth_Colour_Multiply: 0.2
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _Foam_Colour_Strength: 0.96
+    - _Foam_Colour_Strength: 0.71
     - _Foam_Count: 1
     - _Foam_Cutoff: 1
     - _Foam_Speed: 1.15
@@ -125,23 +127,24 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _Shallow_Colour_Multiply: 0.67
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _Water_Colour_Strength: 1
+    - _Water_Colour_Strength: 0.65
     - _Water_Depth: 5
     - _Water_Normal_Strength: 0.77
     - _Water_Refraction_Scale: 3.15
     - _Water_Refraction_Speed: 0.19
     - _Water_Texture_Scale: 0.51
-    - _Wave_Frequency: 136.72
-    - _Wave_Height: 0.00132
+    - _Wave_Frequency: 178.5
+    - _Wave_Height: 0.005
     - _Wave_Offset: 0
-    - _Wave_Speed: 1.12
-    - _Wave_Vertical_Offset: 0.0079
+    - _Wave_Speed: 2.14
+    - _Wave_Vertical_Offset: 0.0039
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
