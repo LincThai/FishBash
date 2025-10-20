@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   sentences:
-  - 'Hi! I''m '
+  - Hi I'm Captain Hissinton!
   - You boat the SSS.Salmon can move toward the bow and stern with the WS keys.
   - You can turn you ship to the port side or starboard side with the AD keys.
   isQuest: 0
