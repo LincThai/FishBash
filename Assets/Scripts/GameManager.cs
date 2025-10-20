@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         {
             dialogue_Index = 0;
             // Wait then start the first dialogue
-            StartCoroutine(DialogueWait(3));
+            StartCoroutine(DialogueWait(2));
         }
     }
 

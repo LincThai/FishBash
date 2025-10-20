@@ -143,7 +143,8 @@ public class EnemyFishBashed : MonoBehaviour
         // wait for attack charge
         yield return new WaitForSeconds(enemyChargeTime);
 
-        //Debug.Log("Enemy Charge Time = " + enemyChargeTime);
+        // play charge sound effect
+        FindObjectOfType<AudioManager>().Stop("Charge_Up");
 
         // stop charge animation
         fishAnimator.SetBool("Charging", false);
@@ -195,6 +196,8 @@ public class EnemyFishBashed : MonoBehaviour
 
         // show lose screen
         results.SetActive(true);
+
+        yield return new WaitForSeconds(3);
         resultsAnimator.SetBool("Win", true);
 
         // stop enemy attacks

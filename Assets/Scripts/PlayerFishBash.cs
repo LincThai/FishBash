@@ -183,6 +183,8 @@ public class PlayerFishBash : MonoBehaviour
 
         // show lose screen
         results.SetActive(true);
+
+        yield return new WaitForSeconds(3);
         resultsAnimator.SetBool("Lose", true);
 
         // stop enemy from attacking
