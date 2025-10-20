@@ -988,7 +988,7 @@ RectTransform:
   m_Father: {fileID: 1755339406373924778}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1063,7 +1063,7 @@ RectTransform:
   m_Father: {fileID: 2053401423936236498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1845,7 +1845,7 @@ MonoBehaviour:
   playerMaxLives: 3
   playerCurrentLives: 0
   playerDamage: 1
-  playerAttackCooldown: 5
+  playerAttackCooldown: 1
   isGuarding: 0
   fishBashUi: {fileID: 6771629121679478630}
   playerHealthBar: {fileID: 572175384716017104}

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   sentences:
-  - 
-  - 
-  - 
+  - Ahoy There!
+  - We have an order for some Jays.
+  - They can found near jagged rocks or the muddy swamps.
   isQuest: 1
   questObjective: {fileID: 11400000, guid: 3dc25db974ac35048b9939872663dac5, type: 2}

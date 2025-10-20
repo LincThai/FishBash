@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: DQ_Trench
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  sentences: []
+  sentences:
+  - 'Ahoy there Captain! '
+  - Our customer is looking for a dance purrtner for a great fight.
+  - They like cold places or to stay where there are many opponents ashore.
   isQuest: 1
   questObjective: {fileID: 11400000, guid: a9f2883400c160041bfa36abbd364f80, type: 2}

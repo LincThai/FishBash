@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: DQ_Old
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
-  sentences: []
+  sentences:
+  - Hey there caregiver.
+  - Please go pickup the elderly gentleman.
+  - They prefer to live near the docks or in hot and humid caves.
   isQuest: 1
   questObjective: {fileID: 11400000, guid: d513f8c964c5b2949bb8e0009871d4a9, type: 2}
