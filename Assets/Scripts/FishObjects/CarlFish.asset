@@ -18,7 +18,7 @@ MonoBehaviour:
     abs.
   fishSprite: {fileID: 21300000, guid: 62780aba7f3a11d4280142849c45c100, type: 3}
   animationOverrideController: {fileID: 22100000, guid: 2a747eae5321f4b4391552f1028b98ac, type: 2}
-  MaxHealth: 3
+  MaxHealth: 6
   damage: 1
   attackMaxCooldown: 5
   attackMinCooldown: 3
