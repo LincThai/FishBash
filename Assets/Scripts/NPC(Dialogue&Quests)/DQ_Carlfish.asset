@@ -16,6 +16,6 @@ MonoBehaviour:
   sentences:
   - Hey there fine fisherman.
   - We got a new order in for ya! Catch us a CarlFish will ya.
-  - You can find 'em in most places.
+  - You can find 'em around the docks.
   isQuest: 1
   questObjective: {fileID: 11400000, guid: adf81d07a4de1664abc777209c5c373f, type: 2}

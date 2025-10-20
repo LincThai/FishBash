@@ -81,6 +81,8 @@ public class RadioDialogue : MonoBehaviour
             return;
         }
 
+        // Play Cat Sound
+        FindObjectOfType<AudioManager>().Play("Cat_Meow");
         // create a string variable to store the sentence taken from the queue
         string sentence = sentences.Dequeue();
         // stops all the coroutines running currently on this script

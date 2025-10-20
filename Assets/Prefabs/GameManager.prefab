@@ -48,9 +48,10 @@ MonoBehaviour:
   dialogueQuests:
   - {fileID: 11400000, guid: 1c7c06a3872198742a40ae6dc88a60f0, type: 2}
   - {fileID: 11400000, guid: 388780da6d1b916488fb1e9269557edc, type: 2}
-  - {fileID: 11400000, guid: 388780da6d1b916488fb1e9269557edc, type: 2}
-  - {fileID: 11400000, guid: 388780da6d1b916488fb1e9269557edc, type: 2}
-  - {fileID: 11400000, guid: 388780da6d1b916488fb1e9269557edc, type: 2}
+  - {fileID: 11400000, guid: 4ae083e47214dc347895a8dc1a0fa873, type: 2}
+  - {fileID: 11400000, guid: f3e661406bee1094d91995d900dc6086, type: 2}
+  - {fileID: 11400000, guid: f836a803b71abf94887601ff8410aee2, type: 2}
+  - {fileID: 11400000, guid: cf3d9005312651049973adfa4f90c354, type: 2}
   objective: {fileID: 0}
   longWaittime: 5
   shortWaitTime: 2
